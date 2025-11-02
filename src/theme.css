@@ -1,0 +1,21 @@
+@theme {
+  /* font style */
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Core backgrounds */
+  --color-bg: #24273a;
+  --color-bg-dark: #1e2030;
+  --color-bg-darker: #181926;
+
+  /* Text colors */
+  --color-fg: #cad3f5;
+  --color-fg-muted: #a5adcb;
+
+  /* Accents */
+  --color-accent-primary: #8aadf4;
+  --color-accent-secondary: #c6a0f6;
+  --color-accent-success: #a6da95;
+  --color-accent-warning: #eed49f;
+  --color-accent-error: #ed8796;
+  --color-accent-info: #8bd5ca;
+}
