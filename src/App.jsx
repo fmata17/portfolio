@@ -4,15 +4,19 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
+import BackToTopButton from "./sections/BackToTopButton";
 
 function App() {
   return (
-    <div className="relative h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-gray-900">
+    <div className="relative h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-bg-dark custom-scrollbar">
       <SocialBar />
+      <BackToTopButton />
       <Hero />
       <About />
       <Projects />
       <Skills />
+      <Contact />
     </div>
   );
 }

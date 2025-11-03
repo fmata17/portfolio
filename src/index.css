@@ -1,2 +1,63 @@
 @import "tailwindcss";
 @import "./theme.css";
+
+.diamond-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 5.5rem;
+  justify-items: center;
+}
+
+.diamond-grid > *:nth-child(1) {
+  grid-column: 3;
+}
+.diamond-grid > *:nth-child(2),
+.diamond-grid > *:nth-child(3) {
+  grid-column: span 1;
+}
+.diamond-grid > *:nth-child(4),
+.diamond-grid > *:nth-child(5),
+.diamond-grid > *:nth-child(6) {
+  grid-column: span 1;
+}
+.diamond-grid > *:nth-child(7),
+.diamond-grid > *:nth-child(8),
+.diamond-grid > *:nth-child(9),
+.diamond-grid > *:nth-child(10) {
+  grid-column: span 1;
+}
+.diamond-grid > *:nth-child(11),
+.diamond-grid > *:nth-child(12),
+.diamond-grid > *:nth-child(13) {
+  grid-column: span 1;
+}
+.diamond-grid > *:nth-child(14),
+.diamond-grid > *:nth-child(15) {
+  grid-column: span 1;
+}
+
+/* scrollbar behavior */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+  overflow-y: hidden;        /* hides vertical scroll */
+}
+
+/* Works for both vertical and horizontal scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;  /* vertical scrollbar */
+  height: 6px; /* horizontal scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* subtle color */
+  border-radius: 9999px;
+}

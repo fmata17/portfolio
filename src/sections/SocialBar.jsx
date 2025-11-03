@@ -7,7 +7,7 @@ export default function SocialBar() {
         href="https://github.com/fmata17"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-fg hover:text-accent-secondary transition text-4xl"
+        className="text-fg hover:text-accent-secondary transition text-2xl"
       >
         <FaGithub />
       </a>
@@ -15,7 +15,7 @@ export default function SocialBar() {
         href="https://www.linkedin.com/in/fredy-mata/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-fg hover:text-accent-primary transition text-4xl"
+        className="text-fg hover:text-accent-primary transition text-2xl"
       >
         <FaLinkedin />
       </a>

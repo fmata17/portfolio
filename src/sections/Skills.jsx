@@ -1,45 +1,33 @@
 import { useState } from "react";
 import {
-  SiTypescript,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-  SiGit,
-  SiCplusplus,
-  SiDocker,
-  SiFlutter,
-  SiDjango,
-  SiPytorch,
-  SiTensorflow,
-  SiScikitlearn,
-  SiFastapi,
-  SiGoogle,
-  SiAmazon,
+  SiTypescript, SiPython, SiReact, SiTailwindcss, SiGit,
+  SiCplusplus, SiDocker, SiFlutter, SiDjango, SiPytorch,
+  SiTensorflow, SiScikitlearn, SiFastapi, SiGoogle, SiAmazon,
 } from "react-icons/si";
 
-const skillGroups = {
-  Frontend: [
-    { name: "TypeScript", icon: <SiTypescript />, level: "Intermediate", percentage: 70 },
+const skills = {
+  frontend: [
     { name: "React", icon: <SiReact />, level: "Intermediate", percentage: 70 },
-    { name: "Tailwind CSS", icon: <SiTailwindcss />, level: "Intermediate", percentage: 65 },
+    { name: "Tailwind CSS", icon: <SiTailwindcss />, level: "Intermediate", percentage: 60 },
+    { name: "TypeScript", icon: <SiTypescript />, level: "Intermediate", percentage: 70 },
     { name: "Flutter", icon: <SiFlutter />, level: "Amateur", percentage: 45 },
   ],
-  Backend: [
+  backend: [
     { name: "Python", icon: <SiPython />, level: "Advanced", percentage: 90 },
-    { name: "C++", icon: <SiCplusplus />, level: "Amateur", percentage: 50 },
-    { name: "Django", icon: <SiDjango />, level: "Intermediate", percentage: 60 },
-    { name: "FastAPI", icon: <SiFastapi />, level: "Intermediate", percentage: 65 },
+    { name: "C++", icon: <SiCplusplus />, level: "Advanced", percentage: 85 },
+    { name: "FastAPI", icon: <SiFastapi />, level: "Intermediate", percentage: 70 },
+    { name: "Django", icon: <SiDjango />, level: "Intermediate", percentage: 65 },
   ],
-  "ML & AI": [
-    { name: "PyTorch", icon: <SiPytorch />, level: "Intermediate", percentage: 70 },
+  ml: [
+    { name: "scikit-learn", icon: <SiScikitlearn />, level: "Advanced", percentage: 80 },
+    { name: "PyTorch", icon: <SiPytorch />, level: "Intermediate", percentage: 75 },
     { name: "TensorFlow", icon: <SiTensorflow />, level: "Amateur", percentage: 50 },
-    { name: "scikit-learn", icon: <SiScikitlearn />, level: "Intermediate", percentage: 65 },
   ],
-  "DevOps & Cloud": [
-    { name: "Docker", icon: <SiDocker />, level: "Amateur", percentage: 45 },
-    { name: "Git", icon: <SiGit />, level: "Intermediate", percentage: 75 },
-    { name: "AWS", icon: <SiAmazon />, level: "Amateur", percentage: 50 },
+  cloud: [
+    { name: "AWS", icon: <SiAmazon />, level: "Amateur", percentage: 55 },
     { name: "Google Cloud", icon: <SiGoogle />, level: "Amateur", percentage: 50 },
+    { name: "Docker", icon: <SiDocker />, level: "Amateur", percentage: 40 },
+    { name: "Git", icon: <SiGit />, level: "Advanced", percentage: 80 },
   ],
 };
 
@@ -47,31 +35,27 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen snap-start bg-[#0d1117] text-white flex flex-col items-center justify-center px-4 py-24"
+      className="min-h-screen snap-start bg-bg-darker font-mono text-fg flex flex-col items-center justify-center px-4 py-10"
     >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-purple-400 mb-16 font-mono">
-        self.skills =
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-accent-primary mb-16 font-mono">
+        showcase(<span className="text-fg">self.skills</span>)
       </h2>
 
-      <div className="flex flex-col gap-20">
-        {Object.entries(skillGroups).map(([groupName, skills]) => (
-          <SkillCluster key={groupName} title={groupName} skills={skills} />
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-6 sm:gap-x-6 max-w-screen-lg w-full px-10">
+        {Object.entries(skills).map(([category, list]) => (
+          <div key={category} className="flex flex-col items-center">
+            <h3 className="text-accent-primary font-semibold font-mono text-sm sm:text-base uppercase mb-4">
+              {category.replace(/\b\w/g, (l) => l.toUpperCase())}
+            </h3>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-12">
+              {list.map((skill, idx) => (
+                <SkillCircle key={idx} {...skill} />
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </section>
-  );
-}
-
-function SkillCluster({ title, skills }) {
-  return (
-    <div className="flex flex-col items-center">
-      <h3 className="text-green-400 mb-6 font-mono">{title}</h3>
-      <div className="flex flex-wrap justify-center gap-6 max-w-5xl">
-        {skills.map((skill, idx) => (
-          <SkillCircle key={idx} {...skill} />
-        ))}
-      </div>
-    </div>
   );
 }
 
@@ -80,22 +64,20 @@ function SkillCircle({ icon, name, level, percentage }) {
 
   return (
     <div
-      className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#1e1e2e] hover:bg-[#2a2a3d] border border-gray-700 shadow-md flex items-center justify-center transition-all duration-200 ease-in-out transform hover:scale-105 relative group"
+      className="aspect-square w-[14vw] max-w-[100px] min-w-[48px] rounded-full bg-bg-darker hover:bg-bg border border-fg-muted shadow-md flex items-center justify-center transition-all duration-200 ease-in-out transform hover:scale-110 relative group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {hovered ? (
-        <div className="text-center text-xs text-green-400 font-semibold">
+        <div className="text-center text-[0.5rem] sm:text-xxs text-accent-primary font-mono">
           {level}
           <br />
-          <span className="text-gray-300">{percentage}%</span>
+          <span className="text-fg">{percentage}%</span>
         </div>
       ) : (
-        <div className="text-3xl text-green-300">{icon}</div>
+        <div className="text-2xl sm:text-3xl text-accent-primary hover:text-accent-secondary">{icon}</div>
       )}
-
-      {/* Skill label */}
-      <p className="absolute text-[10px] text-gray-400 top-full mt-1 text-center w-full">
+      <p className="absolute text-[0.65rem] sm:text-xs text-fg top-full mt-2 text-center w-full">
         {name}
       </p>
     </div>
