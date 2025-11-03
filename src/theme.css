@@ -2,6 +2,7 @@
   /* font style */
   --font-mono: "JetBrains Mono", monospace;
 
+  /* Catppuccin Macchiato theme */
   /* Core backgrounds */
   --color-bg: #24273a;
   --color-bg-dark: #1e2030;
@@ -18,4 +19,5 @@
   --color-accent-warning: #eed49f;
   --color-accent-error: #ed8796;
   --color-accent-info: #8bd5ca;
+  --color-accent-peach: #f5a97f;
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import SocialBar from "./sections/SocialBar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
-import Skills from "./sections/Skills"
+import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <SocialBar />
       <Hero />
       <About />
-      <Skills />
       <Projects />
+      <Skills />
     </div>
   );
 }
