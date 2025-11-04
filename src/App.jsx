@@ -9,7 +9,10 @@ import BackToTopButton from "./sections/BackToTopButton";
 
 function App() {
   return (
-    <div className="relative h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-bg-dark custom-scrollbar">
+    <div
+      className="relative h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
+                 scroll-smooth bg-bg-dark custom-scrollbar"
+    >
       <SocialBar />
       <BackToTopButton />
       <Hero />
