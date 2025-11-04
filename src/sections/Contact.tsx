@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 export default function Contact() {
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,6 +18,8 @@ export default function Contact() {
     };
 
     try {
+      setStatus("loading");
+
       const res = await fetch("https://api.fredymata.dev/api/contact", {
         method: "POST",
         headers: {
@@ -105,6 +109,11 @@ export default function Contact() {
           </button>
 
           {/* Submission Feedback */}
+          {status === "loading" && (
+            <p className="text-sm text-accent-warning mt-2">
+              Sending message... please wait.
+            </p>
+          )}
           {status === "success" && (
             <p className="text-sm text-accent-success mt-2">
               Message sent successfully!
