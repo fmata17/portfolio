@@ -106,12 +106,12 @@ export default function Contact() {
 
           {/* Submission Feedback */}
           {status === "success" && (
-            <p className="text-sm text-green-400 mt-2">
+            <p className="text-sm text-accent-success mt-2">
               Message sent successfully!
             </p>
           )}
           {status === "error" && (
-            <p className="text-sm text-red-400 mt-2">
+            <p className="text-sm text-accent-error mt-2">
               There was an error. Please try again.
             </p>
           )}
