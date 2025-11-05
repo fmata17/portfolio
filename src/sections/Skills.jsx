@@ -1,31 +1,90 @@
 import { useState } from "react";
 import {
-  SiTypescript, SiPython, SiReact, SiTailwindcss, SiGit,
-  SiCplusplus, SiDocker, SiFlutter, SiDjango, SiPytorch,
-  SiTensorflow, SiScikitlearn, SiFastapi, SiGoogle, SiAmazon,
+  SiTypescript,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiGit,
+  SiCplusplus,
+  SiDocker,
+  SiFlutter,
+  SiDjango,
+  SiPytorch,
+  SiTensorflow,
+  SiScikitlearn,
+  SiFastapi,
+  SiGoogle,
+  SiAmazon,
+  SiHuggingface,
 } from "react-icons/si";
 
 const skills = {
   frontend: [
     { name: "React", icon: <SiReact />, level: "Intermediate", percentage: 70 },
-    { name: "Tailwind CSS", icon: <SiTailwindcss />, level: "Intermediate", percentage: 60 },
-    { name: "TypeScript", icon: <SiTypescript />, level: "Intermediate", percentage: 70 },
+    {
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss />,
+      level: "Intermediate",
+      percentage: 70,
+    },
+    {
+      name: "TypeScript",
+      icon: <SiTypescript />,
+      level: "Intermediate",
+      percentage: 60,
+    },
     { name: "Flutter", icon: <SiFlutter />, level: "Amateur", percentage: 45 },
   ],
   backend: [
     { name: "Python", icon: <SiPython />, level: "Advanced", percentage: 90 },
     { name: "C++", icon: <SiCplusplus />, level: "Advanced", percentage: 85 },
-    { name: "FastAPI", icon: <SiFastapi />, level: "Intermediate", percentage: 70 },
-    { name: "Django", icon: <SiDjango />, level: "Intermediate", percentage: 65 },
+    {
+      name: "FastAPI",
+      icon: <SiFastapi />,
+      level: "Intermediate",
+      percentage: 70,
+    },
+    {
+      name: "Django",
+      icon: <SiDjango />,
+      level: "Intermediate",
+      percentage: 65,
+    },
   ],
   ml: [
-    { name: "scikit-learn", icon: <SiScikitlearn />, level: "Advanced", percentage: 80 },
-    { name: "PyTorch", icon: <SiPytorch />, level: "Intermediate", percentage: 75 },
-    { name: "TensorFlow", icon: <SiTensorflow />, level: "Amateur", percentage: 50 },
+    {
+      name: "scikit-learn",
+      icon: <SiScikitlearn />,
+      level: "Advanced",
+      percentage: 80,
+    },
+    {
+      name: "PyTorch",
+      icon: <SiPytorch />,
+      level: "Intermediate",
+      percentage: 75,
+    },
+    {
+      name: "TensorFlow",
+      icon: <SiTensorflow />,
+      level: "Amateur",
+      percentage: 50,
+    },
+    {
+      name: "Hugging Face",
+      icon: <SiHuggingface />,
+      level: "Amateur",
+      percentage: 35,
+    },
   ],
   cloud: [
     { name: "AWS", icon: <SiAmazon />, level: "Amateur", percentage: 55 },
-    { name: "Google Cloud", icon: <SiGoogle />, level: "Amateur", percentage: 50 },
+    {
+      name: "Google Cloud",
+      icon: <SiGoogle />,
+      level: "Amateur",
+      percentage: 50,
+    },
     { name: "Docker", icon: <SiDocker />, level: "Amateur", percentage: 40 },
     { name: "Git", icon: <SiGit />, level: "Advanced", percentage: 80 },
   ],
@@ -75,7 +134,9 @@ function SkillCircle({ icon, name, level, percentage }) {
           <span className="text-fg">{percentage}%</span>
         </div>
       ) : (
-        <div className="text-2xl sm:text-3xl text-accent-primary hover:text-accent-secondary">{icon}</div>
+        <div className="text-2xl sm:text-3xl text-accent-primary hover:text-accent-secondary">
+          {icon}
+        </div>
       )}
       <p className="absolute text-[0.65rem] sm:text-xs text-fg top-full mt-2 text-center w-full">
         {name}

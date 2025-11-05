@@ -142,8 +142,8 @@ export default function Hero() {
         >
           {[
             { href: "#about", label: "About Me" },
-            { href: "#skills", label: "Skills" },
             { href: "#projects", label: "Projects" },
+            { href: "#skills", label: "Skills" },
             { href: "#contact", label: "Contact Me", accent: true },
           ].map(({ href, label, accent }) => (
             <a
