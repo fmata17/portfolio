@@ -27,16 +27,27 @@ export default function About() {
 
           {/* Paragraph box */}
           <div className="bg-bg-dark rounded-b-md border border-accent-primary py-4 pl-4 pr-2 sm:p-6 shadow-lg">
-            <h2 className="text-[3.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.8vw] xl:text-[2.6vw] text-accent-primary mb-2">
+            <h2 className="text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.8vw] xl:text-[1.6vw] text-accent-primary mb-2">
               A little about me...
             </h2>
-            <p className="leading-loose text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.8vw] xl:text-[1.6vw] text-fg-muted">
+            <p
+              className="leading-loose text-fg-muted
+                          text-[2.5vw] sm:text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] xl:text-[1.5vw]"
+            >
               I’m a Salvadoran computer science student based in Texas,
               currently wrapping up my Associate of Science and pursuing a
               Bachelor’s in CS. I’m especially drawn to software development and
-              the infrastructure that powers machine learning. Outside of code,
-              I play the drums, kick around a soccer ball when I can, and debug
-              most of my bugs with the help of my cat, Leia Skywalker.
+              the infrastructure that powers machine learning.
+            </p>
+            <p
+              className="leading-loose text-fg-muted mt-4
+                          text-[2.5vw] sm:text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] xl:text-[1.5vw]"
+            >
+              Outside of code, I enjoy music—especially playing drums in a band.
+              I love soccer, even if I don’t get to play as often as I’d like.
+              Fishing helps clear my mind, and most of my late-night coding
+              sessions wouldn’t be the same without my cat, Leia Skywalker,
+              curled up beside me.
             </p>
           </div>
         </motion.div>
