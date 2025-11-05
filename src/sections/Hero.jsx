@@ -109,7 +109,7 @@ export default function Hero() {
         <img
           src="https://avatars.githubusercontent.com/u/157691349?s=400&u=45ed6b2fda8f36353ee2549b203f882ec30ed1bb&v=4"
           alt="Fredy's avatar"
-          className="w-30 h-30 sm:w-40 sm:h-40 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-58 xl:h-58 rounded-full border-2 border-accent-primary shadow-lg mb-4"
+          className="w-[30vw] h-[30vw] sm:w-[30vw] sm:h-[30vw] md:w-[20vw] md:h-[20vw] lg:w-[16vw] lg:h-[16vw] xl:w-[16vw] xl:h-[16vw] rounded-full border-2 border-accent-primary shadow-lg mb-4"
         />
 
         <p

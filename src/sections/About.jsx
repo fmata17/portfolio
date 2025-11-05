@@ -4,30 +4,33 @@ export default function About() {
   return (
     <section
       id="about"
-      className="h-screen snap-start flex items-center justify-center bg-bg-darker text-fg px-6 overflow-hidden"
+      className="min-h-screen snap-start flex items-center justify-center bg-bg-darker text-fg px-8 sm:px-10 md:px-12 xl:px-20 overflow-hidden"
     >
-      <div className="w-full max-w-6xl flex flex-col md:flex-row items-center gap-10">
-        {/* Left: Text block with heading and animated paragraph */}
+      <div className="w-full max-w-7xl flex flex-col md:flex-row items-center gap-4 lg:gap-10">
+        {/* Left: Text block */}
         <motion.div
-          className="w-full md:w-1/2 font-mono"
+          className="w-full font-mono mt-10 md:mt-0"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
           {/* File tab bar */}
-          <div className="w-full bg-bg rounded-t-md border border-accent-primary border-b-0 px-4 py-2 flex items-center gap-2 text-sm font-mono text-fg-muted">
-            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-            <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
-            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+          <div
+            className="bg-bg rounded-t-md border border-accent-primary border-b-0 px-4 py-2 flex items-center gap-2
+                          text-[2.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.6vw] xl:text-[1.4vw] text-fg-muted"
+          >
+            <span className="w-[1.5vw] h-[1.5vw] md:w-[1.2vw] md:h-[1.2vw] lg:w-[1vw] lg:h-[1vw] xl:w-[0.8vw] xl:h-[0.8vw] bg-accent-error rounded-full" />
+            <span className="w-[1.5vw] h-[1.5vw] md:w-[1.2vw] md:h-[1.2vw] lg:w-[1vw] lg:h-[1vw] xl:w-[0.8vw] xl:h-[0.8vw] bg-accent-warning rounded-full" />
+            <span className="w-[1.5vw] h-[1.5vw] md:w-[1.2vw] md:h-[1.2vw] lg:w-[1vw] lg:h-[1vw] xl:w-[0.8vw] xl:h-[0.8vw] bg-accent-success rounded-full" />
             <span className="ml-4">bio.txt</span>
           </div>
 
-          {/* Paragraph content */}
-          <div className="bg-bg-dark rounded-b-md border border-accent-primary p-6 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl text-accent-primary mb-4">
+          {/* Paragraph box */}
+          <div className="bg-bg-dark rounded-b-md border border-accent-primary py-4 pl-4 pr-2 sm:p-6 shadow-lg">
+            <h2 className="text-[3.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.8vw] xl:text-[2.6vw] text-accent-primary mb-2">
               A little about me...
             </h2>
-            <p className="leading-loose text-sm sm:text-base text-fg-muted py-5">
+            <p className="leading-loose text-[3vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.8vw] xl:text-[1.6vw] text-fg-muted">
               I’m a Salvadoran computer science student based in Texas,
               currently wrapping up my Associate of Science and pursuing a
               Bachelor’s in CS. I’m especially drawn to software development and
@@ -38,15 +41,15 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Right: Two profile images */}
+        {/* Right: Image block */}
         <motion.div
-          className="w-1/2 flex flex-col items-center justify-center gap-4"
+          className="w-full md:w-1/2 flex flex-row md:flex-col items-center justify-center gap-6"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Real image with cat */}
-          <div className="relative w-48 h-48 md:w-100 md:h-56 rounded-xl overflow-hidden border-2 border-accent-primary shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="relative w-[42.5vw] h-[24vw] sm:w-[42.5vw] sm:h-[24vw] md:w-[35.5vw] md:h-[20vw] lg:w-[35.5vw] lg:h-[20vw] xl:w-[35.5vw] xl:h-[20vw] rounded-xl overflow-hidden border-2 border-accent-primary shadow-lg hover:scale-105 transition-transform duration-300">
             <img
               src="/code_partners.jpeg"
               alt="Fredy and cat"
@@ -54,12 +57,12 @@ export default function About() {
             />
           </div>
 
-          {/* Animated developer image */}
-          <div className="relative w-48 h-48 md:w-100 md:h-56 rounded-xl overflow-hidden border-2 border-accent-primary shadow-lg hover:scale-105 transition-transform duration-300">
+          {/* Developer illustration */}
+          <div className="relative w-[42.5vw] h-[24vw] sm:w-[42.5vw] sm:h-[24vw] md:w-[35.5vw] md:h-[20vw] lg:w-[35.5vw] lg:h-[20vw] xl:w-[35.5vw] xl:h-[20vw] rounded-xl overflow-hidden border-2 border-accent-primary shadow-lg hover:scale-105 transition-transform duration-300">
             <img
               src="https://img.itch.zone/aW1nLzE1NzU1OTc2LnBuZw==/original/oVOTQk.png"
               alt="Developer Illustration"
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
             />
           </div>
         </motion.div>

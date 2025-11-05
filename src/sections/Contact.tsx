@@ -68,6 +68,7 @@ export default function Contact() {
               name="name"
               type="text"
               required
+              placeholder="<Your Name Here />"
               className="px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
@@ -82,6 +83,7 @@ export default function Contact() {
               name="email"
               type="email"
               required
+              placeholder="foo@bar.dev"
               className="px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
@@ -96,6 +98,7 @@ export default function Contact() {
               name="message"
               rows={5}
               required
+              placeholder="// TODO: Write a real message"
               className="px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
