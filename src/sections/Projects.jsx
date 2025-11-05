@@ -98,7 +98,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="h-screen snap-start bg-bg-dark text-fg flex items-center justify-center pl-4"
+      className="min-h-screen snap-start bg-bg-dark text-fg flex items-center justify-center pl-4"
     >
       <div className="w-full max-w-7xl h-full flex">
         <div className="hidden md:flex flex-col items-start pr-6 py-10 w-1/4 border-r border-accent-primary">
