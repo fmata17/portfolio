@@ -21,70 +21,25 @@ import {
 const skills = {
   frontend: [
     { name: "React", icon: <SiReact />, level: "Intermediate", percentage: 70 },
-    {
-      name: "Tailwind CSS",
-      icon: <SiTailwindcss />,
-      level: "Intermediate",
-      percentage: 70,
-    },
-    {
-      name: "TypeScript",
-      icon: <SiTypescript />,
-      level: "Intermediate",
-      percentage: 60,
-    },
+    { name: "Tailwind CSS", icon: <SiTailwindcss />, level: "Intermediate", percentage: 70 },
+    { name: "TypeScript", icon: <SiTypescript />, level: "Intermediate", percentage: 60 },
     { name: "Flutter", icon: <SiFlutter />, level: "Amateur", percentage: 45 },
   ],
   backend: [
     { name: "Python", icon: <SiPython />, level: "Advanced", percentage: 90 },
     { name: "C++", icon: <SiCplusplus />, level: "Advanced", percentage: 85 },
-    {
-      name: "FastAPI",
-      icon: <SiFastapi />,
-      level: "Intermediate",
-      percentage: 70,
-    },
-    {
-      name: "Django",
-      icon: <SiDjango />,
-      level: "Intermediate",
-      percentage: 65,
-    },
+    { name: "FastAPI", icon: <SiFastapi />, level: "Intermediate", percentage: 70 },
+    { name: "Django", icon: <SiDjango />, level: "Intermediate", percentage: 65 },
   ],
   ml: [
-    {
-      name: "scikit-learn",
-      icon: <SiScikitlearn />,
-      level: "Advanced",
-      percentage: 80,
-    },
-    {
-      name: "PyTorch",
-      icon: <SiPytorch />,
-      level: "Intermediate",
-      percentage: 75,
-    },
-    {
-      name: "TensorFlow",
-      icon: <SiTensorflow />,
-      level: "Amateur",
-      percentage: 50,
-    },
-    {
-      name: "Hugging Face",
-      icon: <SiHuggingface />,
-      level: "Amateur",
-      percentage: 35,
-    },
+    { name: "scikit-learn", icon: <SiScikitlearn />, level: "Advanced", percentage: 80 },
+    { name: "PyTorch", icon: <SiPytorch />, level: "Intermediate", percentage: 75 },
+    { name: "TensorFlow", icon: <SiTensorflow />, level: "Amateur", percentage: 50 },
+    { name: "Hugging Face", icon: <SiHuggingface />, level: "Amateur", percentage: 35 },
   ],
   cloud: [
     { name: "AWS", icon: <SiAmazon />, level: "Amateur", percentage: 55 },
-    {
-      name: "Google Cloud",
-      icon: <SiGoogle />,
-      level: "Amateur",
-      percentage: 50,
-    },
+    { name: "Google Cloud", icon: <SiGoogle />, level: "Amateur", percentage: 50 },
     { name: "Docker", icon: <SiDocker />, level: "Amateur", percentage: 40 },
     { name: "Git", icon: <SiGit />, level: "Advanced", percentage: 80 },
   ],
@@ -94,23 +49,30 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen snap-start bg-bg-darker font-mono text-fg flex flex-col items-center justify-center px-4 py-10"
+      className="h-screen snap-start bg-bg-darker font-mono text-fg flex flex-col items-center justify-center px-[4vw] py-[4vw] overflow-hidden"
     >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-accent-primary mb-16 font-mono">
+      <h2 className="text-[6vw] sm:text-[5vw] md:text-[3vw] font-semibold text-accent-primary mb-[4vw]">
         showcase(<span className="text-fg">self.skills</span>)
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-6 sm:gap-x-6 max-w-screen-lg w-full px-10">
-        {Object.entries(skills).map(([category, list]) => (
-          <div key={category} className="flex flex-col items-center">
-            <h3 className="text-accent-primary font-semibold font-mono text-sm sm:text-base uppercase mb-4">
+      <div className="relative w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-[4vw] justify-items-center items-center">
+        {Object.entries(skills).map(([category, list], catIdx) => (
+          <div
+            key={category}
+            className="w-full bg-bg rounded-2xl p-[3vw] border border-accent-primary shadow-xl hover:shadow-accent-primary transition-shadow duration-300 flex flex-col items-center"
+          >
+            <h3 className="text-accent-primary text-[4vw] sm:text-[3vw] md:text-[2vw] font-semibold mb-[2vw] uppercase tracking-wider">
               {category.replace(/\b\w/g, (l) => l.toUpperCase())}
             </h3>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-12">
+            <ul className="flex flex-col gap-[2vw] w-full">
               {list.map((skill, idx) => (
-                <SkillCircle key={idx} {...skill} />
+                <SkillRow
+                  key={idx}
+                  {...skill}
+                  delay={idx * 0.1 + catIdx * 0.3}
+                />
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>
@@ -118,29 +80,25 @@ export default function Skills() {
   );
 }
 
-function SkillCircle({ icon, name, level, percentage }) {
-  const [hovered, setHovered] = useState(false);
-
+function SkillRow({ icon, name, level, percentage, delay = 0 }) {
   return (
-    <div
-      className="aspect-square w-[14vw] max-w-[100px] min-w-[48px] rounded-full bg-bg-darker hover:bg-bg border border-fg-muted shadow-md flex items-center justify-center transition-all duration-200 ease-in-out transform hover:scale-110 relative group"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+    <li
+      className="flex items-center gap-[2vw] w-full animate-fadeInUp"
+      style={{ animationDelay: `${delay}s` }}
     >
-      {hovered ? (
-        <div className="text-center text-[0.5rem] sm:text-xxs text-accent-primary font-mono">
-          {level}
-          <br />
-          <span className="text-fg">{percentage}%</span>
+      <div className="text-[6vw] sm:text-[4vw] md:text-[2.5vw] text-accent-primary">{icon}</div>
+      <div className="flex-1">
+        <div className="flex justify-between text-[3vw] sm:text-[2.5vw] md:text-[1.5vw] text-fg-muted">
+          <span className="font-semibold">{name}</span>
+          <span>{level}</span>
         </div>
-      ) : (
-        <div className="text-2xl sm:text-3xl text-accent-primary hover:text-accent-secondary">
-          {icon}
+        <div className="w-full h-[1vw] bg-bg-darker rounded-full overflow-hidden mt-[1vw]">
+          <div
+            className="h-full bg-accent-primary rounded-full transition-all duration-500"
+            style={{ width: `${percentage}%` }}
+          ></div>
         </div>
-      )}
-      <p className="absolute text-[0.65rem] sm:text-xs text-fg top-full mt-2 text-center w-full">
-        {name}
-      </p>
-    </div>
+      </div>
+    </li>
   );
 }
