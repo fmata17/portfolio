@@ -101,6 +101,7 @@ export default function Projects() {
       className="min-h-screen snap-start bg-bg-dark text-fg flex flex-row items-center justify-center"
     >
       <div className="w-full h-full flex px-8 sm:px-10 md:px-12 xl:px-20">
+        {/* TODO add a projects heading when the left sidebar is hidden, anything under md tailwind size */}
         <div className="hidden md:flex flex-col items-start pr-6 py-10 w-1/4 border-r border-accent-primary">
           <h2
             className="text-[3.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
