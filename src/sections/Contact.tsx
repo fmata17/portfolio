@@ -40,9 +40,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen snap-start px-6 py-6 bg-bg-dark text-fg flex flex-col items-center justify-center"
+      className="min-h-screen px-6 py-6 bg-bg-dark text-fg flex flex-col items-center justify-center"
     >
-      <div className="w-full max-w-xl space-y-6">
+      <div className="snap-start w-full max-w-xl space-y-6">
         {/* Section Headings */}
         <div className="text-center">
           <h2
