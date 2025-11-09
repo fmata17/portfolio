@@ -11,7 +11,7 @@ function App() {
   return (
     <div
       className="relative h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
-                 scroll-smooth bg-bg-dark custom-scrollbar"
+                 scroll-smooth bg-bg-dark custom-scrollbar font-mono"
     >
       <SocialBar />
       <BackToTopButton />

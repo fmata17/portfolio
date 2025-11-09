@@ -98,11 +98,14 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen snap-start bg-bg-dark text-fg flex items-center justify-center pl-4"
+      className="min-h-screen snap-start bg-bg-dark text-fg flex flex-row items-center justify-center"
     >
-      <div className="w-full max-w-7xl h-full flex">
+      <div className="w-full h-full flex px-8 sm:px-10 md:px-12 xl:px-20">
         <div className="hidden md:flex flex-col items-start pr-6 py-10 w-1/4 border-r border-accent-primary">
-          <h2 className="text-3xl font-mono font-bold mb-6 text-accent-primary">
+          <h2
+            className="text-[3.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
+                       font-mono font-bold mb-6 text-accent-primary"
+          >
             Projects
           </h2>
           <ul className="space-y-4">
@@ -110,11 +113,12 @@ export default function Projects() {
               <li key={index}>
                 <a
                   href={`#project-${index}`}
-                  className={`text-sm font-mono transition-colors ${
-                    index === activeIndex
-                      ? "text-accent-secondary font-semibold"
-                      : "text-fg-muted hover:text-accent-secondary"
-                  }`}
+                  className={`text-[2.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.3vw]
+                              font-mono transition-colors ${
+                                index === activeIndex
+                                  ? "text-accent-secondary font-semibold"
+                                  : "text-fg-muted hover:text-accent-secondary"
+                              }`}
                 >
                   {project.name}
                 </a>
@@ -123,32 +127,36 @@ export default function Projects() {
           </ul>
         </div>
 
-        <div className="w-full md:w-full h-full overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-6 py-8 px-2 custom-scrollbar">
+        <div className="w-full h-full overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-6 py-8 px-2 custom-scrollbar">
           {projects.map((project, index) => (
             <div
               key={index}
               id={`project-${index}`}
               data-index={index}
               ref={(el) => (projectRefs.current[index] = el)}
-              className="min-w-full snap-center flex flex-col items-center justify-center px-6"
+              className="min-w-full snap-center flex flex-col items-center justify-center"
             >
               <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-6">
                 <div className="text-left space-y-4 max-w-md">
-                  <h3 className="text-2xl font-mono font-semibold text-accent-primary">
+                  <h3
+                    className="text-[5.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
+                               font-mono font-semibold text-accent-primary"
+                  >
                     {project.name}
                   </h3>
 
                   {/* Status Tag */}
                   <span
-                    className={`inline-block text-xs px-2 py-1 rounded-full font-mono font-semibold ${
-                      project.progress === 100
-                        ? "bg-accent-success text-bg-darker"
-                        : project.progress >= 70
-                        ? "bg-accent-warning text-bg-darker"
-                        : project.progress >= 30
-                        ? "bg-accent-peach text-bg-darker"
-                        : "bg-accent-error text-bg-darker"
-                    }`}
+                    className={`text-[2.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
+                                inline-block px-2 py-1 rounded-full font-mono font-semibold ${
+                                  project.progress === 100
+                                    ? "bg-accent-success text-bg-darker"
+                                    : project.progress >= 70
+                                    ? "bg-accent-warning text-bg-darker"
+                                    : project.progress >= 30
+                                    ? "bg-accent-peach text-bg-darker"
+                                    : "bg-accent-error text-bg-darker"
+                                }`}
                   >
                     {project.status}
                   </span>
@@ -169,11 +177,17 @@ export default function Projects() {
                     </div>
                   )}
 
-                  <p className="text-fg-muted font-mono text-sm md:text-base">
+                  <p
+                    className="text-[2.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.3vw]
+                                text-fg-muted font-mono"
+                  >
                     {project.description}
                   </p>
 
-                  <div className="flex items-center gap-3 text-xl text-accent-secondary">
+                  <div
+                    className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw]
+                               flex items-center gap-3 text-accent-secondary"
+                  >
                     {project.tech.map((icon, i) => (
                       <span key={i}>{icon}</span>
                     ))}
@@ -183,7 +197,8 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center font-mono text-sm text-accent-secondary hover:underline hover:text-accent-success"
+                    className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
+                               inline-flex items-center font-mono text-accent-secondary hover:underline hover:text-accent-success"
                   >
                     <FaGithub className="mr-2" />
                     View on GitHub

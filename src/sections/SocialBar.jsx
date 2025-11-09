@@ -8,7 +8,7 @@ export default function SocialBar() {
         target="_blank"
         rel="noopener noreferrer"
         className="text-fg hover:text-accent-secondary transition
-                   text-[6vw] sm:text-[5.5vw] md:text-[4.5vw] lg:text-[4vw] xl:text-[3.5vw]"
+                   text-[6vw] sm:text-[5vw] md:text-[4vw] lg:text-[3vw] xl:text-[2.5vw]"
       >
         <FaGithub />
       </a>
@@ -17,7 +17,7 @@ export default function SocialBar() {
         target="_blank"
         rel="noopener noreferrer"
         className="text-fg hover:text-accent-primary transition
-                   text-[6vw] sm:text-[5.5vw] md:text-[4.5vw] lg:text-[4vw] xl:text-[3.5vw]"
+                   text-[6vw] sm:text-[5vw] md:text-[4vw] lg:text-[3vw] xl:text-[2.5vw]"
       >
         <FaLinkedin />
       </a>

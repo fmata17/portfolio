@@ -42,13 +42,19 @@ export default function Contact() {
       id="contact"
       className="min-h-screen snap-start px-6 py-6 bg-bg-dark text-fg flex flex-col items-center justify-center"
     >
-      <div className="w-full max-w-xl flex-grow space-y-6">
+      <div className="w-full max-w-xl space-y-6">
         {/* Section Headings */}
         <div className="text-center">
-          <h2 className="text-4xl sm:text-5xl text-accent-primary font-bold">
+          <h2
+            className="text-[8vw] sm:text-[5vw] md:text-[3vw] lg:text-[4vw] xl:text-[3vw]
+                       text-accent-primary font-mono font-bold"
+          >
             Contact Me
           </h2>
-          <h3 className="text-3lg sm:text-xl text-fg-muted">
+          <h3
+            className="text-[4vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw]
+                       text-fg-muted"
+          >
             Let’s make something happen!
           </h3>
         </div>
@@ -60,7 +66,11 @@ export default function Contact() {
         >
           {/* Name */}
           <div className="flex flex-col">
-            <label htmlFor="name" className="mb-1 text-sm text-fg-muted">
+            <label
+              htmlFor="name"
+              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+                         mb-1 text-fg-muted"
+            >
               Name
             </label>
             <input
@@ -69,13 +79,18 @@ export default function Contact() {
               type="text"
               required
               placeholder="<Your Name Here />"
-              className="px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
+              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+                         px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
 
           {/* Email */}
           <div className="flex flex-col">
-            <label htmlFor="email" className="mb-1 text-sm text-fg-muted">
+            <label
+              htmlFor="email"
+              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+                         mb-1 text-fg-muted"
+            >
               Email
             </label>
             <input
@@ -84,13 +99,18 @@ export default function Contact() {
               type="email"
               required
               placeholder="foo@bar.dev"
-              className="px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
+              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+                         px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
 
           {/* Message */}
           <div className="flex flex-col">
-            <label htmlFor="message" className="mb-1 text-sm text-fg-muted">
+            <label
+              htmlFor="message"
+              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+                         mb-1 text-fg-muted"
+            >
               Message
             </label>
             <textarea
@@ -99,14 +119,16 @@ export default function Contact() {
               rows={5}
               required
               placeholder="// TODO: Write a real message"
-              className="px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
+              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+                         px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-2 bg-accent-primary text-bg font-semibold rounded hover:bg-accent-secondary transition"
+            className="text-[4vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[1.5vw]
+                       w-full py-2 bg-accent-primary text-bg font-semibold rounded hover:bg-accent-secondary transition"
           >
             Send Message
           </button>

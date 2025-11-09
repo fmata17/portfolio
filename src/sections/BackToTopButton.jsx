@@ -37,7 +37,7 @@ export default function BackToTopButton() {
         bg-accent-primary text-bg hover:bg-accent-secondary hover:scale-110`}
       aria-label="Back to top"
     >
-      <FaArrowUp className="text-lg" />
+      <FaArrowUp className="text-[4vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]" />
     </button>
   );
 }

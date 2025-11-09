@@ -126,13 +126,16 @@ export default function Hero() {
         <p
           className="text-[5vw] sm:text-[5vw] md:text-[4vw] lg:text-[4vw] xl:text-[3vw]
                      text-accent-primary flex items-center 
-                     min-h-[3rem] sm:min-h-[4rem] md:min-h-[4rem] lg:min-h-[5rem] xl:min-h-[5rem]"
+                     min-h-[3rem] sm:min-h-[4rem] md:min-h-[4rem] lg:min-h-[5rem] xl:min-h-[6rem]"
         >
           {displayedText}
           <span className="border-r-2 border-accent-primary ml-1 animate-pulse" />
         </p>
 
-        <p className="text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.8vw] xl:text-[1.6vw] text-fg-muted mb-10 pt-10">
+        <p
+          className="text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.8vw] xl:text-[1.6vw]
+                     text-fg-muted mb-10 pt-10"
+        >
           Welcome to my portfolio.
         </p>
 
