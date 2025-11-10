@@ -3,7 +3,7 @@
 
 /* Works for both vertical and horizontal scrollbars */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;  /* vertical scrollbar */
+  width: 6px; /* vertical scrollbar */
   height: 6px; /* horizontal scrollbar */
 }
 
@@ -14,4 +14,15 @@
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2); /* subtle color */
   border-radius: 9999px;
+}
+
+/* Chrome, Safari, and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* IE, Edge, and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

@@ -55,7 +55,7 @@ const projects = [
   {
     name: "Personal Portfolio",
     description:
-      "This portfolio site showcases clean design, scroll-snapping transitions, and developer-focused aesthetics. Built with React, TypeScript, Vite, and Tailwind CSS, and powered by a lightweight backend via Render for contact form handling. Designed with a retro-tiling window manager feel, inspired by the LazyVim Catppuccin Macchiato theme and Sway-like minimalist desktops.",
+      "This portfolio site showcases clean design, scroll-snapping transitions, and developer-focused aesthetics. Built with React, TypeScript, Vite, and Tailwind CSS, and powered by a lightweight backend via Render and Resend for contact form handling. Designed with a retro-tiling window manager feel, inspired by the LazyVim Catppuccin Macchiato theme and Sway-like minimalist desktops.",
     github: "https://github.com/fmata17/portfolio",
     image: "/project_images/portfolio_v2.jpeg",
     tech: [
@@ -78,7 +78,7 @@ export default function Projects() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = parseInt(entry.target.dataset.index);
-            setActiveIndex(index);
+            requestAnimationFrame(() => setActiveIndex(index));
           }
         });
       },
@@ -139,96 +139,118 @@ export default function Projects() {
           </h2>
         </div>
 
-        <motion.div
-          className="w-full h-full overflow-x-auto scroll-smooth snap-x snap-mandatory
-                     flex gap-6 py-8 px-2 custom-scrollbar"
-          initial={{ opacity: 1, x: 80 }}
-          whileInView={{ opacity: 1, x: [80, 0, 30, 0, 10, 0] }}
-          transition={{
-            duration: 1.3,
-            times: [0, 0.2, 0.4, 0.6, 0.8, 1],
-          }}
-        >
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              id={`project-${index}`}
-              data-index={index}
-              ref={(el) => (projectRefs.current[index] = el)}
-              className="min-w-full snap-center flex flex-col items-center justify-center"
-            >
-              <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-6">
-                <div className="text-left space-y-4 max-w-md">
-                  <h3
-                    className="text-[4.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
-                               font-mono font-semibold text-accent-primary"
-                  >
-                    {project.name}
-                  </h3>
+        {/* Scrollable project cards */}
+        <div className="w-full h-full flex flex-col items-center">
+          <motion.div
+            className="w-full h-full overflow-x-auto scroll-smooth snap-x snap-mandatory
+                       flex gap-6 py-8 px-2 hide-scrollbar"
+            initial={{ opacity: 1, x: 80 }}
+            whileInView={{ opacity: 1, x: [80, 0, 30, 0, 10, 0] }}
+            transition={{
+              duration: 1.3,
+              times: [0, 0.2, 0.4, 0.6, 0.8, 1],
+            }}
+          >
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                id={`project-${index}`}
+                data-index={index}
+                ref={(el) => (projectRefs.current[index] = el)}
+                className="min-w-full snap-center flex flex-col items-center justify-center"
+              >
+                <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-6">
+                  <div className="text-left space-y-4 max-w-md">
+                    <h3
+                      className="text-[4.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
+                                 font-mono font-semibold text-accent-primary"
+                    >
+                      {project.name}
+                    </h3>
 
-                  {/* Status Tag */}
-                  <span
-                    className={`text-[2.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
-                                inline-block px-2 py-1 rounded-full font-mono font-semibold ${
-                                  project.progress === 100
-                                    ? "bg-accent-success text-bg-darker"
-                                    : project.progress >= 70
-                                    ? "bg-accent-warning text-bg-darker"
-                                    : project.progress >= 30
-                                    ? "bg-accent-peach text-bg-darker"
-                                    : "bg-accent-error text-bg-darker"
-                                }`}
-                  >
-                    {project.status}
-                  </span>
+                    {/* Status Tag */}
+                    <span
+                      className={`text-[2.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
+                                  inline-block px-2 py-1 rounded-full font-mono font-semibold ${
+                                    project.progress === 100
+                                      ? "bg-accent-success text-bg-darker"
+                                      : project.progress >= 70
+                                      ? "bg-accent-warning text-bg-darker"
+                                      : project.progress >= 30
+                                      ? "bg-accent-peach text-bg-darker"
+                                      : "bg-accent-error text-bg-darker"
+                                  }`}
+                    >
+                      {project.status}
+                    </span>
 
-                  {/* Optional Progress Bar */}
-                  {project.progress < 100 && (
-                    <div className="w-full h-2 bg-bg-darker rounded-md overflow-hidden">
-                      <div
-                        className={`h-full transition-all duration-300 ${
-                          project.progress >= 70
-                            ? "bg-accent-warning"
-                            : project.progress >= 30
-                            ? "bg-accent-peach"
-                            : "bg-accent-error"
-                        }`}
-                        style={{ width: `${project.progress}%` }}
-                      />
+                    {/* Optional Progress Bar */}
+                    {project.progress < 100 && (
+                      <div className="w-full h-2 bg-bg-darker rounded-md overflow-hidden">
+                        <div
+                          className={`h-full transition-all duration-300 ${
+                            project.progress >= 70
+                              ? "bg-accent-warning"
+                              : project.progress >= 30
+                              ? "bg-accent-peach"
+                              : "bg-accent-error"
+                          }`}
+                          style={{ width: `${project.progress}%` }}
+                        />
+                      </div>
+                    )}
+
+                    <p
+                      className="text-[2.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.3vw]
+                                  text-fg-muted font-mono"
+                    >
+                      {project.description}
+                    </p>
+
+                    <div
+                      className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw]
+                                 flex items-center gap-3 text-accent-secondary"
+                    >
+                      {project.tech.map((icon, i) => (
+                        <span key={i}>{icon}</span>
+                      ))}
                     </div>
-                  )}
 
-                  <p
-                    className="text-[2.5vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.3vw]
-                                text-fg-muted font-mono"
-                  >
-                    {project.description}
-                  </p>
-
-                  <div
-                    className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw]
-                               flex items-center gap-3 text-accent-secondary"
-                  >
-                    {project.tech.map((icon, i) => (
-                      <span key={i}>{icon}</span>
-                    ))}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
+                                 inline-flex items-center font-mono text-accent-secondary hover:underline hover:text-accent-success"
+                    >
+                      <FaGithub className="mr-2" />
+                      View on GitHub
+                    </a>
                   </div>
-
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
-                               inline-flex items-center font-mono text-accent-secondary hover:underline hover:text-accent-success"
-                  >
-                    <FaGithub className="mr-2" />
-                    View on GitHub
-                  </a>
                 </div>
               </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Dots carousel navigation */}
+          <div className="flex justify-center items-center gap-3">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  const el = projectRefs.current[index];
+                  if (el)
+                    el.scrollIntoView({ behavior: "smooth", inline: "center" });
+                }}
+                className={`w-[2vw] h-[2vw] md:w-[1vw] md:h-[1vw] lg:w-[0.8vw] lg:h-[0.8vw] rounded-full transition-transform duration-300 ${
+                  index === activeIndex
+                    ? "bg-accent-primary scale-150"
+                    : "bg-fg-muted hover:bg-accent-secondary"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

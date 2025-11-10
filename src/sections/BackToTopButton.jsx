@@ -24,14 +24,18 @@ export default function BackToTopButton() {
     };
   }, []);
 
-  const scrollToHero = () => {
-    const hero = document.getElementById("hero");
-    hero?.scrollIntoView({ behavior: "smooth" });
+  const scrollToTopAndCleanURL = () => {
+    const scrollContainer = document.querySelector(".custom-scrollbar");
+    scrollContainer?.scrollTo({ top: 0, behavior: "smooth" });
+
+    // Fully reset pathname and hash
+    const cleanURL = window.location.origin + "/";
+    window.history.pushState({}, "", cleanURL);
   };
 
   return (
     <button
-      onClick={scrollToHero}
+      onClick={scrollToTopAndCleanURL}
       className={`fixed bottom-6 right-6 z-50 p-3 rounded-full transition duration-300
         ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}
         bg-accent-primary text-bg hover:bg-accent-secondary hover:scale-110`}
