@@ -242,7 +242,7 @@ export default function Projects() {
                   if (el)
                     el.scrollIntoView({ behavior: "smooth", inline: "center" });
                 }}
-                className={`w-[2vw] h-[2vw] md:w-[1vw] md:h-[1vw] lg:w-[0.8vw] lg:h-[0.8vw] rounded-full transition-transform duration-300 ${
+                className={`w-[1.2vw] h-[1.2vw] md:w-[1vw] md:h-[1vw] lg:w-[0.6vw] lg:h-[0.6vw] rounded-full transition-transform duration-300 ${
                   index === activeIndex
                     ? "bg-accent-primary scale-150"
                     : "bg-fg-muted hover:bg-accent-secondary"
