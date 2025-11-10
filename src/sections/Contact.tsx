@@ -127,7 +127,7 @@ export default function Contact() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="text-[3.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[1.5vw]
+            className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw]
                        w-full py-2 bg-accent-primary text-bg font-semibold rounded hover:bg-accent-secondary transition"
           >
             Send Message
