@@ -97,7 +97,7 @@ export default function Skills() {
       className="h-screen snap-start bg-bg-darker font-mono text-fg flex flex-col items-center justify-center px-[4vw] py-[4vw] overflow-hidden"
     >
       <h2
-        className="text-[4vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2.5vw]
+        className="text-[5.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2.5vw]
                    font-mono font-semibold text-accent-primary mb-[3vw] md:mb-[1vw]"
       >
         showcase(<span className="text-fg">self.skills</span>)
@@ -110,7 +110,7 @@ export default function Skills() {
             className="w-full bg-bg rounded-2xl px-[1.5vw] pt-[0.5vw] pb-[1.5vw] border border-accent-primary shadow-xl hover:shadow-accent-primary transition-shadow duration-300 flex flex-col items-center"
           >
             <h3
-              className="text-[3vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.8vw]
+              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw]
                          mb-[1vw] md:mb-[0.5vw]
                          text-accent-primary font-semibold uppercase tracking-wider"
             >
@@ -148,7 +148,7 @@ function SkillRow({ icon, name, level, percentage, delay = 0 }) {
       <div className="flex-1">
         {/* skill name and level */}
         <div
-          className="text-[2vw] sm:text-[2vw] md:text-[1.5vw] lg:text-[2vw] xl:text-[1.5vw]
+          className="text-[2vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.5vw]
                      flex justify-between text-fg-muted"
         >
           <span className="font-semibold">{name}</span>

@@ -46,13 +46,13 @@ export default function Contact() {
         {/* Section Headings */}
         <div className="text-center">
           <h2
-            className="text-[8vw] sm:text-[5vw] md:text-[3vw] lg:text-[4vw] xl:text-[3vw]
+            className="text-[8vw] sm:text-[5vw] md:text-[3.5vw] lg:text-[3vw] xl:text-[2.5vw]
                        text-accent-primary font-mono font-bold"
           >
             Contact Me
           </h2>
           <h3
-            className="text-[4vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1.5vw]
+            className="text-[4vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.8vw] xl:text-[1.5vw]
                        text-fg-muted"
           >
             Let’s make something happen!
@@ -62,13 +62,13 @@ export default function Contact() {
         {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-bg p-6 rounded shadow-lg border border-accent-primary space-y-4"
+          className="bg-bg p-4 rounded shadow-lg border border-accent-primary space-y-4"
         >
           {/* Name */}
           <div className="flex flex-col">
             <label
               htmlFor="name"
-              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+              className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
                          mb-1 text-fg-muted"
             >
               Name
@@ -79,7 +79,7 @@ export default function Contact() {
               type="text"
               required
               placeholder="<Your Name Here />"
-              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+              className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
                          px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
@@ -88,7 +88,7 @@ export default function Contact() {
           <div className="flex flex-col">
             <label
               htmlFor="email"
-              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+              className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
                          mb-1 text-fg-muted"
             >
               Email
@@ -99,7 +99,7 @@ export default function Contact() {
               type="email"
               required
               placeholder="foo@bar.dev"
-              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+              className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
                          px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
@@ -108,7 +108,7 @@ export default function Contact() {
           <div className="flex flex-col">
             <label
               htmlFor="message"
-              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+              className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
                          mb-1 text-fg-muted"
             >
               Message
@@ -119,7 +119,7 @@ export default function Contact() {
               rows={5}
               required
               placeholder="// TODO: Write a real message"
-              className="text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] lg:text-[2vw] xl:text-[1vw]
+              className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
                          px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
           </div>
@@ -127,7 +127,7 @@ export default function Contact() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="text-[4vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[1.5vw]
+            className="text-[3.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[1.5vw]
                        w-full py-2 bg-accent-primary text-bg font-semibold rounded hover:bg-accent-secondary transition"
           >
             Send Message

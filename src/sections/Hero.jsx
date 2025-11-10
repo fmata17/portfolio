@@ -107,7 +107,7 @@ export default function Hero() {
       {/* Foreground content */}
       <div className="relative z-10 flex flex-col items-center max-w-screen-lg w-full">
         <img
-          src="https://avatars.githubusercontent.com/u/157691349?s=400&u=45ed6b2fda8f36353ee2549b203f882ec30ed1bb&v=4"
+          src="/profile.webp"
           alt="Fredy's avatar"
           className="w-[30vw] h-[30vw] sm:w-[30vw] sm:h-[30vw] md:w-[20vw] md:h-[20vw] lg:w-[16vw] lg:h-[16vw] xl:w-[16vw] xl:h-[16vw] rounded-full border-2 border-accent-primary shadow-lg mb-4"
         />

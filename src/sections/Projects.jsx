@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import {
   SiPython,
@@ -100,8 +101,8 @@ export default function Projects() {
       id="projects"
       className="min-h-screen snap-start bg-bg-dark text-fg flex flex-row items-center justify-center"
     >
-      <div className="w-full h-full flex px-8 sm:px-10 md:px-12 xl:px-20">
-        {/* TODO add a projects heading when the left sidebar is hidden, anything under md tailwind size */}
+      <div className="w-full h-full flex flex-col md:flex-row px-8 sm:px-10 md:px-12 xl:px-20">
+        {/* left side menu for md and bigger screens */}
         <div className="hidden md:flex flex-col items-start pr-6 py-10 w-1/4 border-r border-accent-primary">
           <h2
             className="text-[3.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
@@ -128,7 +129,26 @@ export default function Projects() {
           </ul>
         </div>
 
-        <div className="w-full h-full overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-6 py-8 px-2 custom-scrollbar">
+        {/* Page name for xs and sm screens */}
+        <div className="md:hidden flex flex-col items-start w-fit border-b border-accent-primary">
+          <h2
+            className="text-[5.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
+                       font-mono font-bold mb-1 text-accent-primary px-1"
+          >
+            Projects
+          </h2>
+        </div>
+
+        <motion.div
+          className="w-full h-full overflow-x-auto scroll-smooth snap-x snap-mandatory
+                     flex gap-6 py-8 px-2 custom-scrollbar"
+          initial={{ opacity: 1, x: 80 }}
+          whileInView={{ opacity: 1, x: [80, 0, 30, 0, 10, 0] }}
+          transition={{
+            duration: 1.3,
+            times: [0, 0.2, 0.4, 0.6, 0.8, 1],
+          }}
+        >
           {projects.map((project, index) => (
             <div
               key={index}
@@ -140,7 +160,7 @@ export default function Projects() {
               <div className="w-full h-full flex flex-col md:flex-row items-center justify-center gap-6">
                 <div className="text-left space-y-4 max-w-md">
                   <h3
-                    className="text-[5.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
+                    className="text-[4.5vw] sm:text-[3.5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw]
                                font-mono font-semibold text-accent-primary"
                   >
                     {project.name}
@@ -208,7 +228,7 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

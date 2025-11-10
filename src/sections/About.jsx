@@ -65,7 +65,7 @@ export default function About() {
                        w-[42.5vw] h-[24vw] sm:w-[42.5vw] sm:h-[24vw] md:w-[35.5vw] md:h-[20vw] lg:w-[35.5vw] lg:h-[20vw] xl:w-[32vw] xl:h-[18vw]"
           >
             <img
-              src="/code_partners.jpeg"
+              src="/code_partners_1.webp"
               alt="Fredy and cat"
               className="object-cover w-full h-full"
             />
@@ -77,7 +77,7 @@ export default function About() {
                        w-[42.5vw] h-[24vw] sm:w-[42.5vw] sm:h-[24vw] md:w-[35.5vw] md:h-[20vw] lg:w-[35.5vw] lg:h-[20vw] xl:w-[32vw] xl:h-[18vw]"
           >
             <img
-              src="https://img.itch.zone/aW1nLzE1NzU1OTc2LnBuZw==/original/oVOTQk.png"
+              src="/code_partners_2.webp"
               alt="Developer Illustration"
               className="object-contain w-full h-full"
             />
