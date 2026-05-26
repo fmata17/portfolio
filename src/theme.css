@@ -2,7 +2,7 @@
   /* font style */
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Catppuccin Macchiato theme */
+  /* Catppuccin Macchiato theme (dark mode default) */
   /* Core backgrounds */
   --color-bg: #24273a;
   --color-bg-dark: #1e2030;
@@ -20,4 +20,20 @@
   --color-accent-error: #ed8796;
   --color-accent-info: #8bd5ca;
   --color-accent-peach: #f5a97f;
+}
+
+/* Catppuccin Latte (light mode) */
+[data-theme="light"] {
+  --color-bg: #eff1f5;
+  --color-bg-dark: #e6e9ef;
+  --color-bg-darker: #dce0e8;
+  --color-fg: #4c4f69;
+  --color-fg-muted: #6c6f85;
+  --color-accent-primary: #1e66f5;
+  --color-accent-secondary: #8839ef;
+  --color-accent-success: #40a02b;
+  --color-accent-warning: #df8e1d;
+  --color-accent-error: #d20f39;
+  --color-accent-info: #179299;
+  --color-accent-peach: #fe640b;
 }
