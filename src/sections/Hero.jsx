@@ -99,25 +99,33 @@ export default function Hero({ isDark, toggleTheme }) {
               <span className="text-fg">(self):</span>
               {"\n    "}
               <span className="text-accent-info">self.degree_progress</span>
-              {" = "}
+              <span className="text-fg"> </span>
+              <span className="text-accent-warning">=</span>
+              <span className="text-fg"> </span>
               <span className="text-accent-peach">
                 "Associate’s → Bachelor’s in Computer Science"
               </span>
               {"\n    "}
               <span className="text-accent-info">self.goal</span>
-              {" = "}
+              <span className="text-fg"> </span>
+              <span className="text-accent-warning">=</span>
+              <span className="text-fg"> </span>
               <span className="text-accent-peach">
                 "Pursue a Master’s in Machine Learning or AI"
               </span>
               {"\n    "}
               <span className="text-accent-info">self.hobbies</span>
-              {" = "}
+              <span className="text-fg"> </span>
+              <span className="text-accent-warning">=</span>
+              <span className="text-fg"> </span>
               <span className="text-accent-peach">
                 ["Drums", "Fishing", "Studying ML"]
               </span>
               {"\n    "}
               <span className="text-accent-info">self.motto</span>
-              {" = "}
+              <span className="text-fg"> </span>
+              <span className="text-accent-warning">=</span>
+              <span className="text-fg"> </span>
               <span className="text-accent-success">
                 "Mindset + Ambition = Success"
               </span>
