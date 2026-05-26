@@ -22,11 +22,10 @@ const projects = [
     tech: [
       <SiPython key="py" />,
       <SiPytorch key="torch" />,
-      <SiTensorflow key="tf" />,
       <SiScikitlearn key="sk" />,
     ],
     status: "In Progress",
-    progress: 30,
+    progress: 50,
   },
   {
     name: "Galactic Guardian",
@@ -47,7 +46,6 @@ const projects = [
     tech: [
       <SiPython key="py" />,
       <SiCplusplus key="cpp" />,
-      <FaGithub key="git" />,
     ],
     status: "In Progress",
     progress: 70,

@@ -34,10 +34,10 @@ export default function About() {
               className="leading-loose text-fg-muted
                          text-[2.5vw] sm:text-[2.5vw] md:text-[1.5vw] lg:text-[1.5vw] xl:text-[1.2vw]"
             >
-              I’m a Salvadoran computer science student based in Texas,
-              currently wrapping up my Associate of Science and pursuing a
-              Bachelor’s in CS. I’m especially drawn to software development and
-              the infrastructure that powers machine learning.
+              I’m a Salvadoran computer science student based in Texas. Having
+              earned my Associate of Science, I am now pursuing my Bachelor’s in
+              CS, focusing on AI, machine learning infrastructure, and software
+              development.
             </p>
             <p
               className="leading-loose text-fg-muted mt-4

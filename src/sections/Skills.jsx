@@ -36,13 +36,13 @@ const skills = {
     { name: "Flutter", icon: <SiFlutter />, level: "Amateur", percentage: 45 },
   ],
   backend: [
-    { name: "Python", icon: <SiPython />, level: "Advanced", percentage: 90 },
-    { name: "C++", icon: <SiCplusplus />, level: "Advanced", percentage: 85 },
+    { name: "Python", icon: <SiPython />, level: "Advanced", percentage: 95 },
+    { name: "C++", icon: <SiCplusplus />, level: "Advanced", percentage: 90 },
     {
       name: "FastAPI",
       icon: <SiFastapi />,
-      level: "Intermediate",
-      percentage: 70,
+      level: "Advanced",
+      percentage: 80,
     },
     {
       name: "Django",
@@ -61,32 +61,32 @@ const skills = {
     {
       name: "PyTorch",
       icon: <SiPytorch />,
-      level: "Intermediate",
-      percentage: 75,
+      level: "Advanced",
+      percentage: 90,
     },
     {
       name: "TensorFlow",
       icon: <SiTensorflow />,
-      level: "Amateur",
-      percentage: 50,
+      level: "Intermediate",
+      percentage: 60,
     },
     {
       name: "Hugging Face",
       icon: <SiHuggingface />,
-      level: "Amateur",
-      percentage: 35,
+      level: "Intermediate",
+      percentage: 85,
     },
   ],
   cloud: [
-    { name: "AWS", icon: <SiAmazon />, level: "Amateur", percentage: 55 },
+    { name: "AWS", icon: <SiAmazon />, level: "Intermediate", percentage: 65 },
     {
       name: "Google Cloud",
       icon: <SiGoogle />,
-      level: "Amateur",
-      percentage: 50,
+      level: "Intermediate",
+      percentage: 60,
     },
-    { name: "Docker", icon: <SiDocker />, level: "Amateur", percentage: 40 },
-    { name: "Git", icon: <SiGit />, level: "Advanced", percentage: 80 },
+    { name: "Docker", icon: <SiDocker />, level: "Intermediate", percentage: 60 },
+    { name: "Git", icon: <SiGit />, level: "Advanced", percentage: 90 },
   ],
 };
 

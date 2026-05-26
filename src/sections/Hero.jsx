@@ -5,8 +5,8 @@ export default function Hero() {
   const words = [
     "Fredy.",
     "a full-stack developer.",
-    "a ML enthusiast.",
     "a builder.",
+    "an optimizer.",
   ];
   const [displayedText, setDisplayedText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
@@ -116,16 +116,16 @@ export default function Hero() {
           className="text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.8vw] xl:text-[1.6vw]
                      text-fg-muted mb-1 tracking-wide"
         >
-          Future AI Engineer
+          AI & Machine Learning Engineer
         </p>
 
-        <h1 className="text-[5vw] sm:text-[5vw] md:text-[4vw] lg:text-[4vw] xl:text-[3vw] mb-2 pt-2">
+        <h1 className="text-fg text-[5vw] sm:text-[5vw] md:text-[4vw] lg:text-[4vw] xl:text-[3vw] mb-2 pt-2">
           Hi, I am
         </h1>
 
         <p
           className="text-[5vw] sm:text-[5vw] md:text-[4vw] lg:text-[4vw] xl:text-[3vw]
-                     text-accent-primary flex items-center 
+                     text-fg flex items-center
                      min-h-[3rem] sm:min-h-[4rem] md:min-h-[4rem] lg:min-h-[5rem] xl:min-h-[6rem]"
         >
           {displayedText}
