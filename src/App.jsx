@@ -10,7 +10,7 @@ import BackToTopButton from "./sections/BackToTopButton";
 
 function App() {
   const [isDark, setIsDark] = useState(
-    () => localStorage.getItem("theme") !== "light"
+    () => localStorage.getItem("theme") !== "light",
   );
 
   const toggleTheme = () => {

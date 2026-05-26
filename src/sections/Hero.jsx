@@ -1,13 +1,11 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export default function Hero() {
-  const words = [
-    "Fredy.",
-    "a full-stack developer.",
-    "a builder.",
-    "an optimizer.",
-  ];
+  const words = useMemo(
+    () => ["Fredy.", "a full-stack developer.", "a builder.", "an optimizer."],
+    [],
+  );
   const [displayedText, setDisplayedText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -38,7 +36,7 @@ export default function Hero() {
     }
 
     return () => clearTimeout(timeout);
-  }, [displayedText, isDeleting, wordIndex]);
+  }, [displayedText, isDeleting, wordIndex, words, typingSpeed]);
 
   return (
     <section

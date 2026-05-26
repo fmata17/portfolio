@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   SiTypescript,
   SiPython,
@@ -85,7 +84,12 @@ const skills = {
       level: "Intermediate",
       percentage: 60,
     },
-    { name: "Docker", icon: <SiDocker />, level: "Intermediate", percentage: 60 },
+    {
+      name: "Docker",
+      icon: <SiDocker />,
+      level: "Intermediate",
+      percentage: 60,
+    },
     { name: "Git", icon: <SiGit />, level: "Advanced", percentage: 90 },
   ],
 };

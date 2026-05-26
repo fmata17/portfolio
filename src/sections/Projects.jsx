@@ -43,10 +43,7 @@ const projects = [
       "A focused CS learning repo covering data structures, algorithms, and time complexity—designed for interview prep and long-term mastery. Built with Python and C++, using Git for version control and LeetCode as the main problem source.",
     github: "https://github.com/fmata17/cs_foundations",
     image: "/project_images/cs_foundations.jpeg",
-    tech: [
-      <SiPython key="py" />,
-      <SiCplusplus key="cpp" />,
-    ],
+    tech: [<SiPython key="py" />, <SiCplusplus key="cpp" />],
     status: "In Progress",
     progress: 70,
   },
@@ -75,22 +72,26 @@ export default function Projects() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = parseInt(entry.target.dataset.index);
+            const index = Number(entry.target.dataset.index);
             requestAnimationFrame(() => setActiveIndex(index));
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.6 },
     );
 
-    projectRefs.current.forEach((el) => {
+    // snapshot the current nodes so cleanup uses the same ones
+    const nodes = projectRefs.current.slice();
+
+    nodes.forEach((el) => {
       if (el) observer.observe(el);
     });
 
     return () => {
-      projectRefs.current.forEach((el) => {
+      nodes.forEach((el) => {
         if (el) observer.unobserve(el);
       });
+      observer.disconnect();
     };
   }, []);
 
@@ -173,10 +174,10 @@ export default function Projects() {
                                     project.progress === 100
                                       ? "bg-accent-success text-bg-darker"
                                       : project.progress >= 70
-                                      ? "bg-accent-warning text-bg-darker"
-                                      : project.progress >= 30
-                                      ? "bg-accent-peach text-bg-darker"
-                                      : "bg-accent-error text-bg-darker"
+                                        ? "bg-accent-warning text-bg-darker"
+                                        : project.progress >= 30
+                                          ? "bg-accent-peach text-bg-darker"
+                                          : "bg-accent-error text-bg-darker"
                                   }`}
                     >
                       {project.status}
@@ -190,8 +191,8 @@ export default function Projects() {
                             project.progress >= 70
                               ? "bg-accent-warning"
                               : project.progress >= 30
-                              ? "bg-accent-peach"
-                              : "bg-accent-error"
+                                ? "bg-accent-peach"
+                                : "bg-accent-error"
                           }`}
                           style={{ width: `${project.progress}%` }}
                         />
