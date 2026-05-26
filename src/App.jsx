@@ -8,14 +8,17 @@ import Contact from "./sections/Contact";
 import BackToTopButton from "./sections/BackToTopButton";
 
 function App() {
+  const [isDark, setIsDark] = useState(true);
+
   return (
     <div
+      data-theme={isDark ? "dark" : "light"}
       className="relative h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden
                  scroll-smooth bg-bg-dark custom-scrollbar font-mono"
     >
       <SocialBar />
       <BackToTopButton />
-      <Hero />
+      <Hero isDark={isDark} toggleTheme={() => setIsDark((d) => !d)} />
       <About />
       <Projects />
       <Skills />
