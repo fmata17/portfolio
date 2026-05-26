@@ -51,10 +51,11 @@ export default function Hero({ isDark, toggleTheme }) {
         onClick={toggleTheme}
         aria-label="Toggle light/dark mode"
         className="absolute top-4 left-4 z-20 w-14 h-7 rounded-full border border-accent-primary bg-bg-dark
-                   flex items-center px-1 cursor-pointer transition-colors duration-300"
+                   flex items-center px-1 cursor-pointer transition-colors duration-300
+                   focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-bg-dark"
       >
-        <FaMoon className="absolute left-1.5 w-3 h-3 text-accent-secondary opacity-70" />
-        <FaSun className="absolute right-1.5 w-3 h-3 text-accent-warning opacity-70" />
+        <FaMoon aria-hidden="true" className="absolute left-1.5 w-3 h-3 text-accent-secondary opacity-70" />
+        <FaSun aria-hidden="true" className="absolute right-1.5 w-3 h-3 text-accent-warning opacity-70" />
         <span
           className={`relative z-10 w-5 h-5 rounded-full bg-accent-primary shadow transition-transform duration-300
                       ${isDark ? "translate-x-0" : "translate-x-7"}`}

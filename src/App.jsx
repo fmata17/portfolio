@@ -8,7 +8,17 @@ import Contact from "./sections/Contact";
 import BackToTopButton from "./sections/BackToTopButton";
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(
+    () => localStorage.getItem("theme") !== "light"
+  );
+
+  const toggleTheme = () => {
+    setIsDark((d) => {
+      const next = !d;
+      localStorage.setItem("theme", next ? "dark" : "light");
+      return next;
+    });
+  };
 
   return (
     <div
@@ -18,7 +28,7 @@ function App() {
     >
       <SocialBar />
       <BackToTopButton />
-      <Hero isDark={isDark} toggleTheme={() => setIsDark((d) => !d)} />
+      <Hero isDark={isDark} toggleTheme={toggleTheme} />
       <About />
       <Projects />
       <Skills />
