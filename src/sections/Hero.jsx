@@ -54,8 +54,14 @@ export default function Hero({ isDark, toggleTheme }) {
                    flex items-center px-1 cursor-pointer transition-colors duration-300
                    focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-bg-dark"
       >
-        <FaMoon aria-hidden="true" className="absolute left-1.5 w-3 h-3 text-accent-secondary opacity-70" />
-        <FaSun aria-hidden="true" className="absolute right-1.5 w-3 h-3 text-accent-warning opacity-70" />
+        <FaMoon
+          aria-hidden="true"
+          className="absolute left-1.5 w-3 h-3 text-accent-secondary opacity-70"
+        />
+        <FaSun
+          aria-hidden="true"
+          className="absolute right-1.5 w-3 h-3 text-accent-warning opacity-70"
+        />
         <span
           className={`relative z-10 w-5 h-5 rounded-full bg-accent-primary shadow transition-transform duration-300
                       ${isDark ? "translate-x-0" : "translate-x-7"}`}
@@ -122,11 +128,30 @@ export default function Hero({ isDark, toggleTheme }) {
 
       {/* Foreground content */}
       <div className="relative z-10 flex flex-col items-center max-w-screen-lg w-full">
-        <img
-          src="/profile.webp"
-          alt="Fredy's avatar"
-          className="w-[30vw] h-[30vw] sm:w-[30vw] sm:h-[30vw] md:w-[20vw] md:h-[20vw] lg:w-[16vw] lg:h-[16vw] xl:w-[16vw] xl:h-[16vw] rounded-full border-2 border-accent-primary shadow-lg mb-4"
-        />
+        <motion.div
+          animate={{
+            y: [-5, 5, -5], // float up/down around its position
+            rotate: [0, -2, 0, 2, 0], // subtle sway
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          whileHover={{
+            scale: [1, 1.1, 1], // zoom in then zoom out while still hovered
+          }}
+          whileHoverTransition={{
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+        >
+          <img
+            src="/profile.webp"
+            alt="Fredy's avatar"
+            className="w-[30vw] h-[30vw] sm:w-[30vw] sm:h-[30vw] md:w-[20vw] md:h-[20vw] lg:w-[16vw] lg:h-[16vw] xl:w-[16vw] xl:h-[16vw] rounded-full border-2 border-accent-primary shadow-lg mb-4"
+          />
+        </motion.div>
 
         <p
           className="text-[3vw] sm:text-[2vw] md:text-[2vw] lg:text-[1.8vw] xl:text-[1.6vw]
