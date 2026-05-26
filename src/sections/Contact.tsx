@@ -79,6 +79,7 @@ export default function Contact() {
               type="text"
               required
               placeholder="<Your Name Here />"
+              autoComplete="name"
               className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
                          px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
@@ -99,6 +100,7 @@ export default function Contact() {
               type="email"
               required
               placeholder="foo@bar.dev"
+              autoComplete="email"
               className="text-[3vw] sm:text-[2.5vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]
                          px-4 py-2 rounded bg-bg-dark border border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary"
             />
