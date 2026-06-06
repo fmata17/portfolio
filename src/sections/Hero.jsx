@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen snap-start bg-bg-dark text-fg font-mono flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12 xl:px-32 overflow-hidden"
+      className="min-h-screen  bg-bg-dark text-fg font-mono flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12 xl:px-32 overflow-hidden"
     >
       {/* Background IDE */}
       {/* should be responsive in both size and location */}

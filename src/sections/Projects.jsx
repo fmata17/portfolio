@@ -86,7 +86,7 @@ const projects = [
     id: "portfolio",
     name: "Personal Portfolio",
     deepDescription:
-      "Engineered with React, Vite, Tailwind CSS, and Framer Motion to deliver an ultra-responsive frontend with scroll-snapping mechanics. Modeled after retro-tiling desktop environments and modern code editor themes (like LazyVim). Features direct integration with modular components, custom Tailwind configurations, and micro-interactions optimized across ultra-wide monitors down to standard mobile viewports.",
+      "Engineered with React, Vite, Tailwind CSS, and Framer Motion to deliver an ultra-responsive frontend. Modeled after retro-tiling desktop environments and modern code editor themes (like LazyVim). Features direct integration with modular components, custom Tailwind configurations, and micro-interactions optimized across ultra-wide monitors down to standard mobile viewports.",
     github: "https://github.com/fmata17/portfolio",
     tech: [
       <SiReact key="react" />,
@@ -231,7 +231,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="h-screen max-h-screen snap-start overflow-hidden bg-bg-darker text-fg flex items-center justify-center px-4 sm:px-8 md:px-12 xl:px-20 relative"
+      className="h-screen max-h-screen overflow-hidden bg-bg-darker text-fg flex items-center justify-center px-4 sm:px-8 md:px-12 xl:px-20 relative"
     >
       <div className="w-full max-w-7xl max-h-[85vh] flex flex-col min-h-0 space-y-6">
         {/* Header and Filters Section */}

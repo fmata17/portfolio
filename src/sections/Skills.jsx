@@ -357,7 +357,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={sectionRef}
-      className="h-screen max-h-screen snap-start overflow-hidden bg-bg-dark text-fg flex flex-col items-center justify-start py-8 px-4 sm:px-8 md:px-12 xl:px-20 relative"
+      className="h-screen max-h-screen overflow-hidden bg-bg-dark text-fg flex flex-col items-center justify-start py-8 px-4 sm:px-8 md:px-12 xl:px-20 relative"
     >
       <div className="w-full max-w-7xl h-full flex flex-col min-h-0 space-y-6 mt-8">
         {/* Header bar */}
