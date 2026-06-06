@@ -54,8 +54,9 @@ export default function Hero() {
         animate={{ opacity: 0.2, x: 0 }}
         transition={{ duration: 0.8 }}
       >
+        {/* Top bar of IDE */}
         <div
-          className="bg-bg rounded-t-md border border-accent-primary border-t-2 px-3 py-2 flex items-center gap-2 text-fg-muted
+          className="bg-bg-darker rounded-t-md border border-accent-primary border-t-2 px-3 py-2 flex items-center gap-2 text-fg-muted
                         text-[1.8vw] sm:text-[1.8vw] md:text-[1.8vw] xl:text-[1.6vw]"
         >
           <span className="w-[1vw] h-[1vw] bg-accent-error rounded-full" />
@@ -63,7 +64,8 @@ export default function Hero() {
           <span className="w-[1vw] h-[1vw] bg-accent-success rounded-full" />
           <span className="ml-4">about.py</span>
         </div>
-        <div className="bg-bg-dark rounded-b-md border border-accent-primary border-b-2 p-2 sm:p-3 md:p-4 shadow-lg">
+        {/* Code content part of IDE */}
+        <div className="bg-bg-darker rounded-b-md border border-accent-primary border-b-2 p-2 sm:p-3 md:p-4 shadow-lg">
           <pre className="whitespace-pre-wrap leading-[1.6] text-left">
             <code>
               <span className="text-accent-secondary">class</span>{" "}
@@ -169,9 +171,9 @@ export default function Hero() {
                      w-full max-w-sm sm:max-w-md md:max-w-md lg:max-w-full xl:max-w-full"
         >
           {[
-            { href: "#about", label: "About Me" },
             { href: "#projects", label: "Projects" },
             { href: "#skills", label: "Skills" },
+            { href: "#about", label: "About Me" },
             { href: "#contact", label: "Contact Me", accent: true },
           ].map(({ href, label, accent }) => (
             <a

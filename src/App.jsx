@@ -50,9 +50,9 @@ function App() {
         />
       </button>
       <Hero />
-      <About />
       <Projects />
       <Skills />
+      <About />
       <Contact />
     </div>
   );

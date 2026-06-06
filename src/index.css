@@ -26,3 +26,42 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* Lava animation keyframes for progress bars */
+@keyframes lava-flow {
+  0% {
+    background-position: 150% 0%;
+  }
+  100% {
+    background-position: -150% 0%;
+  }
+}
+
+@keyframes lava-glow {
+  0%, 100% {
+    filter: brightness(1.4) saturate(1.6);
+    opacity: 0.5;
+  }
+  50% {
+    filter: brightness(1.9) saturate(2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes lava-core {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.4; }
+}
+
+/* Utilities */
+.animate-lava-flow {
+  animation: lava-flow 4s linear infinite;
+}
+
+.animate-lava-glow {
+  animation: lava-glow 3s ease-in-out infinite;
+}
+
+.animate-lava-core {
+  animation: lava-core 2s ease-in-out infinite;
+}
