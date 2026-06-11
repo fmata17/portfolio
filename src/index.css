@@ -38,7 +38,8 @@
 }
 
 @keyframes lava-glow {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1.4) saturate(1.6);
     opacity: 0.5;
   }
@@ -49,8 +50,24 @@
 }
 
 @keyframes lava-core {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  } /* Fully invisible */
 }
 
 /* Utilities */
@@ -64,4 +81,8 @@
 
 .animate-lava-core {
   animation: lava-core 2s ease-in-out infinite;
+}
+
+.animate-cursor-blink {
+  animation: blink 1s steps(1, start) infinite;
 }

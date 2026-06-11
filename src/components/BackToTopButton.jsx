@@ -11,9 +11,10 @@ export default function BackToTopButton() {
     if (!scrollContainer || !hero) return;
 
     const checkVisibility = () => {
-      const heroBottom = hero.getBoundingClientRect().bottom;
-      const viewportHeight = scrollContainer.clientHeight;
-      setIsVisible(heroBottom < viewportHeight * 0.5); // Once hero is scrolled up by 50%, show button
+      const scrollContainer = document.querySelector(".custom-scrollbar");
+      const scrollTop = scrollContainer.scrollTop;
+
+      setIsVisible(scrollTop > 200);
     };
 
     scrollContainer.addEventListener("scroll", checkVisibility);
@@ -36,12 +37,12 @@ export default function BackToTopButton() {
   return (
     <button
       onClick={scrollToTopAndCleanURL}
-      className={`fixed bottom-6 right-6 z-50 p-3 rounded-full transition duration-300
+      className={`fixed bottom-2 right-2 z-50 p-3 rounded-full transition duration-300
         ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"}
         bg-accent-primary text-bg hover:bg-accent-secondary hover:scale-110`}
       aria-label="Back to top"
     >
-      <FaArrowUp className="text-[4vw] sm:text-[3vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1vw]" />
+      <FaArrowUp className="text-[0.8rem] md:text-[1.5rem]" />
     </button>
   );
 }
