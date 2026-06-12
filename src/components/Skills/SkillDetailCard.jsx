@@ -45,7 +45,7 @@ export default function SkillDetailCard({
                     {selectedSkill.name}
                   </h3>
 
-                  <p className="text-[9px] sm:text-2xs md:text-xs text-fg-muted">
+                  <p className="text-3xs sm:text-2xs md:text-xs text-fg-muted">
                     {selectedSkill.groupLabel}
                   </p>
                 </div>

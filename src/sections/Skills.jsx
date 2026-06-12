@@ -112,7 +112,7 @@ export default function Skills() {
     <section
       id="skills"
       className="h-screen max-h-screen
-                overflow-y-auto bg-bg-dark
+                overflow-hidden bg-bg-dark
                 text-fg flex items-start justify-center
                 pt-12 md:pt-16
                 px-4 md:px-8
@@ -124,9 +124,10 @@ export default function Skills() {
         {/* Header */}
         <SkillsHeader />
 
-        <div className="flex min-h-0 grid 
+        <div className="min-h-0 grid 
                         grid-rows-[minmax(0,1fr)_76px]
                         sm:grid-rows-[minmax(0,1fr)_110px]
+                        md:grid-rows-[minmax(0,1fr)_140px]
                         lg:grid-rows-1
                         lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.32fr)]
                         gap-2 lg:gap-4">
