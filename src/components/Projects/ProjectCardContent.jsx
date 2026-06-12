@@ -6,7 +6,7 @@ export default function ProjectCardContent({
   return (
     <div className="flex flex-col sm:space-y-0.5">
       <div className="flex items-center justify-between gap-2 min-w-0">
-        <h3 className="text-md md:text-lg lg:text-2xl font-bold text-fg truncate whitespace-nowrap min-w-0">
+        <h3 className="text-md md:text-lg xl:text-2xl font-bold text-fg truncate whitespace-nowrap min-w-0">
           {project.name}
         </h3>
 
@@ -21,7 +21,7 @@ export default function ProjectCardContent({
         </div>
       </div>
 
-      <p className="text-xs md:text-md lg:text-lg hidden sm:block text-fg-muted leading-relaxed">
+      <p className="text-xs md:text-md xl:text-lg hidden sm:block text-fg-muted leading-relaxed">
         {getFirstSentence(project.deepDescription)}
       </p>
     </div>

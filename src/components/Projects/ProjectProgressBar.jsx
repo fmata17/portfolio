@@ -16,7 +16,7 @@ export default function ProjectProgressBar({
 
   return (
     <div className={className}>
-      <div className="text-2xs md:text-xs lg:text-sm flex justify-between text-fg-muted">
+      <div className="text-2xs md:text-xs xl:text-sm flex justify-between text-fg-muted">
         <span>{label}</span>
         <span>{progress}%</span>
       </div>

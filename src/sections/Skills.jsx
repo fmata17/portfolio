@@ -114,7 +114,7 @@ export default function Skills() {
       className="h-screen max-h-screen
                 overflow-hidden bg-bg-dark
                 text-fg flex items-start justify-center
-                pt-12 md:pt-16
+                pt-12 xl:pt-16
                 px-4 md:px-8
                 relative
                 snap-start

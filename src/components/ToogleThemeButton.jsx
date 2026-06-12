@@ -8,8 +8,7 @@ export default function ToogleThemeButton({ isDark, onToggle }) {
       className="
         fixed top-4 left-4 z-50
         w-12 h-6
-        sm:w-14 sm:h-7
-        md:w-16 md:h-8
+        xl:w-16 xl:h-8
         rounded-full
         border border-accent-primary
         bg-bg-dark
@@ -28,8 +27,7 @@ export default function ToogleThemeButton({ isDark, onToggle }) {
         className="
         absolute left-1.5 text-accent-secondary opacity-70
         w-2.5 h-2.5
-        sm:w-3 sm:h-3
-        md:w-4 md:h-4
+        xl:w-4 xl:h-4
         "
       />
 
@@ -37,8 +35,7 @@ export default function ToogleThemeButton({ isDark, onToggle }) {
         aria-hidden="true"
         className="absolute right-1.5 text-accent-warning opacity-70
         w-2.5 h-2.5
-        sm:w-3 sm:h-3
-        md:w-4 md:h-4
+        xl:w-4 xl:h-4
         "
       />
 
@@ -46,8 +43,7 @@ export default function ToogleThemeButton({ isDark, onToggle }) {
         className={`
     relative z-10
     w-4 h-4
-    sm:w-5 sm:h-5
-    md:w-6 md:h-6
+    xl:w-6 xl:h-6
     rounded-full
     bg-accent-primary
     shadow

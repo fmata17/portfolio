@@ -37,7 +37,7 @@ export default function ProjectCard({ project, onExpand, getFirstSentence }) {
         <div className="hidden sm:flex justify-end w-full mt-2">
           <button
             onClick={() => onExpand(project.id)}
-            className="px-2.5 py-1 text-2xs md:text-xs lg:text-sm text-accent-secondary border border-accent-secondary/15 rounded hover:text-accent-success hover:border-accent-success/50 transition-colors"
+            className="px-2.5 py-1 text-2xs xl:text-sm text-accent-secondary border border-accent-secondary/15 rounded hover:text-accent-success hover:border-accent-success/50 transition-colors"
           >
             [ read more ]
           </button>

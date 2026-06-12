@@ -11,8 +11,8 @@ export default function ProjectsHeader({
                  justify-between border-b border-accent-primary/20
                  gap-4 flex-shrink-0"
     >
-      <div className="space-y-0.5 md:space-y-1">
-        <h2 className="text-accent-primary text-3xl md:text-4xl lg:text-5xl font-bold">
+      <div className="space-y-0.5 xl:space-y-1">
+        <h2 className="text-accent-primary text-3xl md:text-4xl xl:text-5xl font-bold">
           Projects
         </h2>
 
@@ -22,7 +22,7 @@ export default function ProjectsHeader({
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-2 text-2xs md:text-xs lg:text-sm">
+      <div className="flex flex-wrap gap-2 text-2xs md:text-xs xl:text-sm">
         {filters.map((type) => (
           <button
             key={type}
