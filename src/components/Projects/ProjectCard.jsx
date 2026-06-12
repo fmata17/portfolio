@@ -20,7 +20,7 @@ export default function ProjectCard({ project, onExpand, getFirstSentence }) {
       }}
       className="bg-[#0d1324] backdrop-blur-sm border rounded-xl 
                 overflow-hidden shadow-md shadow-slate-950/30 border-accent-primary/70 
-                hover:border-accent-secondary/50 hover:bg-[#10172a] lg:min-h-[220px]"
+                hover:border-accent-secondary/50 hover:bg-[#10172a]"
     >
       <div className="px-3 py-2 flex flex-col">
         {/* Header */}
@@ -34,7 +34,7 @@ export default function ProjectCard({ project, onExpand, getFirstSentence }) {
         />
 
         {/* Desktop Read More */}
-        <div className="hidden sm:flex justify-end w-full mt-2">
+        <div className="hidden sm:flex justify-end w-full">
           <button
             onClick={() => onExpand(project.id)}
             className="px-2.5 py-1 text-2xs xl:text-sm text-accent-secondary border border-accent-secondary/15 rounded hover:text-accent-success hover:border-accent-success/50 transition-colors"

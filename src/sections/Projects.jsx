@@ -78,12 +78,12 @@ export default function Projects() {
                 overflow-hidden bg-bg-darker 
                 text-fg flex items-start justify-center
                 pt-12 xl:pt-16
-                px-4 md:px-8
+                px-4 xl:px-8
                 relative
                 snap-start
                 "
     >
-      <div className="w-full max-w-8xl max-h-[90vh] flex flex-col min-h-0 space-y-6">
+      <div className="w-full max-w-8xl h-full min-h-0 flex flex-col space-y-2 xl:space-y-6">
         {/* Header and Filters Section */}
         <ProjectsHeader
           filter={filter}
@@ -92,14 +92,14 @@ export default function Projects() {
         />
 
         {/* Dynamic Scrollable Grid - Bound strictly inside screen limits */}
-        <div className="flex-1 overflow-y-auto min-h-0 custom-scrollbar">
+        <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false }}
             layout
-            className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4 items-start w-full"
+            className="grid grid-cols-1 md:grid-cols-2 gap-2 xl:gap-4 items-start w-full"
           >
             {filteredProjects.map((project) => (
               <ProjectCard

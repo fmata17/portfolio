@@ -10,7 +10,7 @@ export default function ProjectTag({ status, progress }) {
 
   return (
     <span
-      className={`text-2xs md:text-xs xl:text-sm
+      className={`text-3xs xl:text-sm
                   px-1.5 py-0.5 rounded-full font-semibold shrink-0 ${statusClasses}`}
     >
       {status}
