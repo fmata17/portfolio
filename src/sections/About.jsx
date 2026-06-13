@@ -1,49 +1,44 @@
 import { motion } from "framer-motion";
-import { VscAccount, VscCheck, VscTerminal } from "react-icons/vsc";
+import { VscAccount, VscTerminal } from "react-icons/vsc";
 
 const profileImages = [
   {
     src: "/code_partners_1.webp",
     label: "code_partners_1.webp",
     alt: "Fredy Mata with a coding partner",
+    crop: "object-center",
   },
   {
     src: "/code_partners_2.webp",
     label: "code_partners_2.webp",
     alt: "Illustrated late-night engineering workspace",
+    crop: "object-right",
   },
 ];
 
 const operatingModes = [
   {
-    label: "Model-aware builder",
-    copy: "I can reason through ML behavior, data constraints, and product goals without treating any layer as somebody else's problem.",
-    tags: ["PyTorch", "Agents", "Evaluation"],
+    label: "Model fluency",
+    copy: "Reads model behavior through data, evaluation, and product constraints.",
+    tags: ["PyTorch", "Agents", "Eval"],
   },
   {
-    label: "Systems-minded engineer",
-    copy: "I care about runtime behavior, interfaces, observability, and the small implementation choices that decide whether a prototype becomes useful.",
-    tags: ["C++", "CUDA", "WASM"],
+    label: "Production instincts",
+    copy: "Turns prototypes into interfaces, APIs, and runtime paths people can use.",
+    tags: ["React", "APIs", "Systems"],
   },
   {
-    label: "High-context teammate",
-    copy: "I learn new domains quickly, communicate tradeoffs clearly, and keep momentum across research, backend, frontend, and automation work.",
+    label: "Clear ownership",
+    copy: "Keeps tradeoffs, decisions, and next steps visible while the work moves.",
     tags: ["Ownership", "Clarity", "Shipping"],
   },
 ];
 
 const profileRows = [
-  ["Current target", "SWE / ML engineering roles"],
-  ["Best fit", "AI product, ML systems, automation, full-stack delivery"],
-  ["Core edge", "Bridging model thinking with production execution"],
-  ["Working style", "Curious, direct, independent, detail-oriented"],
-];
-
-const signals = [
-  "Turns ambiguous ideas into working systems",
-  "Learns through implementation, measurement, and iteration",
-  "Comfortable moving between UI, APIs, data, and model logic",
-  "Balances technical depth with product usefulness",
+  ["target", "SWE / ML engineering roles"],
+  ["best_fit", "AI products, ML systems, automation"],
+  ["core_edge", "Model intuition + production execution"],
+  ["working_style", "Curious, direct, independent, precise"],
 ];
 
 export default function About() {
@@ -53,19 +48,19 @@ export default function About() {
       className="h-screen max-h-screen
                 overflow-hidden bg-bg-darker
                 text-fg flex items-start justify-center
-                pt-12 md:pt-16
-                px-4 md:px-8
+                pt-12 xl:pt-16
+                px-4 xl:px-8
                 relative
                 snap-start"
     >
-      <div className="w-full max-w-8xl h-full max-h-[calc(100vh-2rem)] md:max-h-[90vh] flex flex-col min-h-0 gap-3 sm:gap-4 md:gap-6">
+      <div className="w-full max-w-8xl h-full min-h-0 flex flex-col space-y-2 xl:space-y-6">
         <div
           className="flex flex-col md:flex-row md:items-end
                  justify-between border-b border-accent-primary/20
                  gap-2 md:gap-4 flex-shrink-0"
         >
           <div className="space-y-0.5 md:space-y-1">
-            <h2 className="text-accent-primary text-3xl md:text-4xl lg:text-5xl font-bold">
+            <h2 className="text-accent-primary text-3xl md:text-4xl xl:text-5xl font-bold">
               About
             </h2>
 
@@ -78,17 +73,17 @@ export default function About() {
 
         <div
           className="flex-1 min-h-0 grid
-                    grid-rows-[154px_minmax(0,1fr)]
-                    sm:grid-rows-[184px_minmax(0,1fr)]
+                    grid-rows-[clamp(118px,22dvh,158px)_minmax(0,1fr)]
+                    min-[390px]:grid-rows-[clamp(132px,24dvh,178px)_minmax(0,1fr)]
                     md:grid-rows-1 md:grid-cols-12
-                    gap-3 md:gap-4 lg:gap-6 pb-4 md:pb-6"
+                    gap-2 lg:gap-4 pb-2"
         >
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.35 }}
             transition={{ duration: 0.35 }}
-            className="md:col-span-5 xl:col-span-4 min-h-0 grid grid-cols-2 md:grid-cols-1 md:grid-rows-2 gap-2 sm:gap-3"
+            className="md:col-span-5 xl:col-span-4 min-h-0 grid grid-cols-2 md:grid-cols-1 md:grid-rows-2 gap-2 lg:gap-3"
           >
             {profileImages.map((image, index) => (
               <div
@@ -102,9 +97,7 @@ export default function About() {
                   </span>
                   <span
                     className={`w-2 h-2 rounded-full ${
-                      index === 0
-                        ? "bg-accent-success/80"
-                        : "bg-accent-info/80"
+                      index === 0 ? "bg-accent-success/80" : "bg-accent-info/80"
                     }`}
                   />
                 </div>
@@ -112,7 +105,7 @@ export default function About() {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="h-full w-full object-cover"
+                    className={`h-full w-full object-cover ${image.crop}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-darker/55 via-transparent to-transparent" />
                 </div>
@@ -136,25 +129,25 @@ export default function About() {
               </span>
             </div>
 
-            <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-4 sm:p-5 md:p-6 space-y-4 md:space-y-5">
-              <div className="space-y-2">
-                <p className="text-accent-primary text-sm md:text-base lg:text-lg font-bold leading-snug">
+            <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-3 min-[390px]:p-4 md:p-5 xl:p-6 flex flex-col gap-3 md:gap-4">
+              <div className="shrink-0 space-y-1.5 md:space-y-2">
+                <p className="text-accent-primary text-sm md:text-base xl:text-lg font-bold leading-snug">
                   I build where machine learning, product engineering, and
                   systems thinking overlap.
                 </p>
-                <p className="text-fg-muted text-xs md:text-sm leading-relaxed max-w-4xl">
-                  My value is range with depth: I can investigate a model,
-                  build the interface around it, wire the backend path, and
-                  explain the tradeoffs without losing sight of the user or the
-                  team shipping it.
+                <p className="text-fg-muted text-[11px] min-[390px]:text-xs md:text-sm leading-relaxed max-w-4xl">
+                  My value is range with depth: I can investigate a model, build
+                  the interface around it, wire the backend path, and explain
+                  the tradeoffs without losing sight of the user or the team
+                  shipping it.
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-3">
+              <div className="shrink-0 grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-3">
                 {operatingModes.map((mode) => (
                   <div
                     key={mode.label}
-                    className="border border-fg-muted/10 rounded-md bg-bg-darker/45 p-3 md:p-4 min-h-[132px] flex flex-col gap-3"
+                    className="border border-fg-muted/10 rounded-md bg-bg-darker/45 p-3 md:p-4 min-h-[112px] lg:min-h-[128px] flex flex-col gap-2"
                   >
                     <div>
                       <h3 className="text-accent-secondary text-xs md:text-sm font-bold">
@@ -178,52 +171,43 @@ export default function About() {
                 ))}
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-3 md:gap-4">
-                <div className="border border-fg-muted/10 rounded-md bg-bg-darker/35 p-3 md:p-4">
-                  <div className="text-[10px] uppercase tracking-widest text-[#6c7086] font-bold mb-2">
+              <div className="shrink-0 rounded-md border border-accent-success/20 bg-accent-success/5 px-3 py-2 md:px-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 text-[11px] md:text-xs">
+                <span className="text-fg-muted">status</span>
+                <span className="text-accent-success font-bold">
+                  open_to_impactful_work
+                </span>
+              </div>
+
+              <div className="shrink-0 border border-accent-primary/20 rounded-md bg-bg-darker/45 overflow-hidden">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 border-b border-fg-muted/10 px-3 py-2 md:px-4 bg-bg-darker/70">
+                  <div className="text-[10px] uppercase text-accent-info font-bold">
                     fastfetch.summary
                   </div>
-                  <div className="divide-y divide-fg-muted/5">
-                    {profileRows.map(([label, value]) => (
-                      <div
-                        key={label}
-                        className="grid grid-cols-[112px_minmax(0,1fr)] gap-3 py-2 text-[11px] md:text-xs"
-                      >
-                        <span className="text-accent-info font-bold">
-                          {label}
-                        </span>
-                        <span className="text-fg-muted">{value}</span>
-                      </div>
-                    ))}
+                  <div className="text-[10px] text-fg-muted">
+                    range_with_depth=true
                   </div>
                 </div>
 
-                <div className="border border-fg-muted/10 rounded-md bg-bg-darker/35 p-3 md:p-4">
-                  <div className="text-[10px] uppercase tracking-widest text-[#6c7086] font-bold mb-2">
-                    hiring_signals
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {signals.map((signal) => (
-                      <div
-                        key={signal}
-                        className="flex items-start gap-2 text-[11px] md:text-xs text-fg-muted leading-relaxed"
-                      >
-                        <VscCheck className="mt-0.5 text-accent-success shrink-0" />
-                        <span>{signal}</span>
+                <div className="grid grid-cols-1 min-[360px]:grid-cols-2 xl:grid-cols-4">
+                  {profileRows.map(([label, value]) => (
+                    <div
+                      key={label}
+                      className="min-h-[66px] border-b border-fg-muted/5 px-3 py-2 min-[360px]:border-r xl:border-b-0 md:px-4"
+                    >
+                      <div className="text-[10px] text-accent-info font-bold">
+                        {label}
                       </div>
-                    ))}
-                  </div>
+                      <div className="mt-1 text-[11px] md:text-xs text-fg-muted leading-relaxed">
+                        {value}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="border-t border-fg-muted/10 pt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-[11px] md:text-xs text-fg-muted">
-                <span>
-                  Personal note: I bring curiosity, discipline, and a builder's
-                  bias into every room I join.
-                </span>
-                <span className="text-accent-success font-bold">
-                  status: open_to_impactful_work
-                </span>
+              <div className="mt-auto shrink-0 border-t border-fg-muted/10 pt-2 md:pt-3 text-[11px] md:text-xs text-fg-muted leading-relaxed">
+                Personal note: I bring curiosity, discipline, and a builder's
+                bias into every room I join.
               </div>
             </div>
           </motion.div>

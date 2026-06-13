@@ -41,9 +41,7 @@ export default function SkillsGroupCard({
         </p>
       </div>
 
-      <div
-        className="flex-1 min-h-0 flex flex-col gap-0.5 sm:gap-1.5 p-1 md:p-2 lg:gap-y-3"
-      >
+      <div className="flex-1 min-h-0 flex flex-col gap-0.5 sm:gap-1.5 p-1 md:p-2 lg:gap-y-3">
         {group.skills.map((skill) => {
           const isSelected =
             selectedSkill.groupId === group.id &&

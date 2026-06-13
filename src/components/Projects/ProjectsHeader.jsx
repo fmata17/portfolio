@@ -1,8 +1,4 @@
-export default function ProjectsHeader({
-  filter,
-  setFilter,
-  onFilterChange,
-}) {
+export default function ProjectsHeader({ filter, setFilter, onFilterChange }) {
   const filters = ["All", "Complete", "In Progress"];
 
   return (
@@ -17,8 +13,7 @@ export default function ProjectsHeader({
         </h2>
 
         <p className="text-fg-muted text-xs md:text-sm lg:text-md">
-          A curated catalog of my engineering, ML, and systems
-          implementations.
+          A curated catalog of my engineering, ML, and systems implementations.
         </p>
       </div>
 

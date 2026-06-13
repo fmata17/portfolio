@@ -49,13 +49,13 @@ export default function ToogleThemeButton({ isDark, onToggle }) {
     shadow
     transition-transform duration-300
   `}
-  style={{
-    transform: isDark
-      ? "translateX(0px)"
-      : window.innerWidth >= 768
-        ? "translateX(1.925rem)"
-        : "translateX(1.425rem)"
-  }}
+        style={{
+          transform: isDark
+            ? "translateX(0px)"
+            : window.innerWidth >= 768
+              ? "translateX(1.925rem)"
+              : "translateX(1.425rem)",
+        }}
       />
     </button>
   );

@@ -120,17 +120,20 @@ export default function Skills() {
                 snap-start
                 hide-scrollbar"
     >
-      <div className="w-full max-w-8xl h-full max-h-[calc(100vh-2rem)] md:max-h-[90vh] flex flex-col min-h-0 gap-2 sm:gap-4 md:gap-6">
+      <div className="w-full max-w-8xl h-full min-h-0 flex flex-col space-y-2 xl:space-y-6">
         {/* Header */}
         <SkillsHeader />
 
-        <div className="min-h-0 grid 
+        <div
+          className="skills-layout-grid min-h-0 grid 
                         grid-rows-[minmax(0,1fr)_76px]
                         sm:grid-rows-[minmax(0,1fr)_110px]
                         md:grid-rows-[minmax(0,1fr)_140px]
                         lg:grid-rows-1
                         lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.32fr)]
-                        gap-2 lg:gap-4">
+                        gap-2 lg:gap-4
+                        pb-2"
+        >
           {/* Skill Groups */}
           <div
             className="min-h-0 grid

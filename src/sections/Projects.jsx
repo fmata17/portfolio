@@ -80,8 +80,7 @@ export default function Projects() {
                 pt-12 xl:pt-16
                 px-4 xl:px-8
                 relative
-                snap-start
-                "
+                snap-start"
     >
       <div className="w-full max-w-8xl h-full min-h-0 flex flex-col space-y-2 xl:space-y-6">
         {/* Header and Filters Section */}

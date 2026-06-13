@@ -139,8 +139,8 @@ export default function Contact() {
             </h2>
 
             <p className="text-fg-muted text-xs md:text-sm lg:text-md">
-              Send a concise note about the role, the problem space, or the
-              next useful step.
+              Send a concise note about the role, the problem space, or the next
+              useful step.
             </p>
           </div>
         </div>
@@ -236,9 +236,7 @@ export default function Contact() {
               </div>
 
               <div className="rounded-md border border-fg-muted/10 bg-bg-dark/60 p-3 text-[11px] text-fg-muted leading-relaxed">
-                <span className="text-accent-info font-bold">
-                  Best signal:
-                </span>{" "}
+                <span className="text-accent-info font-bold">Best signal:</span>{" "}
                 share the problem you are hiring for and the kind of ownership
                 the role needs.
               </div>

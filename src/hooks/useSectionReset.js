@@ -1,10 +1,6 @@
 import { useEffect } from "react";
 
-export default function useSectionReset(
-  sectionRef,
-  callback,
-  threshold = 0.1
-) {
+export default function useSectionReset(sectionRef, callback, threshold = 0.1) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -12,7 +8,7 @@ export default function useSectionReset(
           callback();
         }
       },
-      { threshold }
+      { threshold },
     );
 
     const currentSection = sectionRef.current;
