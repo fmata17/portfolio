@@ -20,7 +20,6 @@ export default function useAutoScrollCycle({
     let animationFrameId;
     let timeoutId;
     let lastFrameTime;
-    let isPointerInteractionActive = false;
 
     const cancelScheduledWork = () => {
       window.clearTimeout(timeoutId);
@@ -112,18 +111,7 @@ export default function useAutoScrollCycle({
 
     const handleUserInteraction = () => {
       if (!isSectionActive) return;
-      scheduleDownwardScroll(config.interactionIdleMs);
-    };
-
-    const handlePointerDown = () => {
-      isPointerInteractionActive = true;
-      handleUserInteraction();
-    };
-
-    const handlePointerUp = () => {
-      if (!isPointerInteractionActive) return;
-      isPointerInteractionActive = false;
-      handleUserInteraction();
+      cancelScheduledWork();
     };
 
     const handleKeyDown = (event) => {
@@ -166,18 +154,16 @@ export default function useAutoScrollCycle({
     scrollContainer.addEventListener("touchstart", handleUserInteraction, {
       passive: true,
     });
-    scrollContainer.addEventListener("pointerdown", handlePointerDown);
+    scrollContainer.addEventListener("pointerdown", handleUserInteraction);
     scrollContainer.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("pointerup", handlePointerUp);
 
     return () => {
       cancelScheduledWork();
       observer.disconnect();
       scrollContainer.removeEventListener("wheel", handleUserInteraction);
       scrollContainer.removeEventListener("touchstart", handleUserInteraction);
-      scrollContainer.removeEventListener("pointerdown", handlePointerDown);
+      scrollContainer.removeEventListener("pointerdown", handleUserInteraction);
       scrollContainer.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("pointerup", handlePointerUp);
     };
   }, [config, scrollContainerRef, sectionRef]);
 }

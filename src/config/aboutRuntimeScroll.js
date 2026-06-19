@@ -4,7 +4,6 @@ export const aboutRuntimeScrollConfig = Object.freeze({
 
   // Automatic scroll timing.
   initialDelayMs: 2_000,
-  interactionIdleMs: 5_000,
   endPauseMs: 3_000,
 
   // Downward scroll speed and upward return animation duration.
