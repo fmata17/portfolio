@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+import MacOSWindowControls from "../MacOSWindowControls";
+
 export default function HeroIDE() {
   return (
     <motion.div
@@ -46,9 +48,7 @@ export default function HeroIDE() {
           md:text-lg
         "
       >
-        <span className="w-[0.5rem] h-[0.5rem] bg-accent-error rounded-full" />
-        <span className="w-[0.5rem] h-[0.5rem] bg-accent-warning rounded-full" />
-        <span className="w-[0.5rem] h-[0.5rem] bg-accent-success rounded-full" />
+        <MacOSWindowControls />
 
         <span className="ml-4">about.py</span>
       </div>

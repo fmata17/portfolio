@@ -20,6 +20,7 @@ export default function useAutoScrollCycle({
     let animationFrameId;
     let timeoutId;
     let lastFrameTime;
+    let automaticScrollPosition = 0;
 
     const cancelScheduledWork = () => {
       window.clearTimeout(timeoutId);
@@ -74,11 +75,12 @@ export default function useAutoScrollCycle({
 
       if (lastFrameTime !== undefined) {
         const elapsedSeconds = Math.min((now - lastFrameTime) / 1_000, 0.1);
-        scrollContainer.scrollTop = Math.min(
+        automaticScrollPosition = Math.min(
           getMaxScrollTop(),
-          scrollContainer.scrollTop +
+          automaticScrollPosition +
             config.downwardPixelsPerSecond * elapsedSeconds,
         );
+        scrollContainer.scrollTop = automaticScrollPosition;
       }
 
       lastFrameTime = now;
@@ -101,6 +103,7 @@ export default function useAutoScrollCycle({
         return;
       }
 
+      automaticScrollPosition = scrollContainer.scrollTop;
       animationFrameId = window.requestAnimationFrame(scrollDown);
     };
 

@@ -1,17 +1,17 @@
 import { VscAccount } from "react-icons/vsc";
 
-export default function AboutImageCard({ image, index }) {
-  const statusColor =
-    index === 0 ? "bg-accent-success/80" : "bg-accent-info/80";
+import MacOSWindowControls from "../MacOSWindowControls";
 
+export default function AboutImageCard({ image }) {
   return (
     <div className="min-h-0 border border-fg-muted/10 rounded-lg overflow-hidden bg-bg-dark/70 backdrop-blur-md flex flex-col">
       <div className="flex items-center justify-between border-b border-fg-muted/10 px-3 py-2 bg-bg-darker/80 select-none flex-shrink-0">
+        <MacOSWindowControls />
+
         <span className="min-w-0 text-[9px] sm:text-[10px] font-mono text-accent-secondary flex items-center gap-1.5 font-bold">
           <VscAccount className="shrink-0" />
           <span className="truncate">{image.label}</span>
         </span>
-        <span className={`w-2 h-2 rounded-full ${statusColor}`} />
       </div>
 
       <div className="relative flex-1 min-h-0 overflow-hidden">

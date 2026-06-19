@@ -11,8 +11,8 @@ export default function AboutImageGrid({ images }) {
       transition={{ duration: 0.35 }}
       className="md:col-span-5 xl:col-span-4 min-h-0 grid grid-cols-2 md:grid-cols-1 md:grid-rows-2 gap-2 lg:gap-3"
     >
-      {images.map((image, index) => (
-        <AboutImageCard key={image.src} image={image} index={index} />
+      {images.map((image) => (
+        <AboutImageCard key={image.src} image={image} />
       ))}
     </motion.div>
   );
