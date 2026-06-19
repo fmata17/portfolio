@@ -21,12 +21,6 @@
   display: none;
 }
 
-/* IE, Edge, and Firefox */
-.scrollbar-hidden {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 /* Lava animation keyframes for progress bars */
 @keyframes lava-flow {
   0% {
