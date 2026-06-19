@@ -1,11 +1,22 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import { VscTerminal } from "react-icons/vsc";
 
+import { aboutRuntimeScrollConfig } from "../../config/aboutRuntimeScroll";
+import useAutoScrollCycle from "../../hooks/useAutoScrollCycle";
 import AboutModeCard from "./AboutModeCard";
 import AboutStatusRow from "./AboutStatusRow";
 import AboutSummaryGrid from "./AboutSummaryGrid";
 
-export default function AboutRuntimePanel({ modes, profileRows }) {
+export default function AboutRuntimePanel({ modes, profileRows, sectionRef }) {
+  const scrollContainerRef = useRef(null);
+
+  useAutoScrollCycle({
+    scrollContainerRef,
+    sectionRef,
+    config: aboutRuntimeScrollConfig,
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -23,7 +34,12 @@ export default function AboutRuntimePanel({ modes, profileRows }) {
         </span>
       </div>
 
-      <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-2 lg:p-3 flex flex-col gap-1 md:gap-2">
+      <div
+        ref={scrollContainerRef}
+        tabIndex={0}
+        aria-label="Profile runtime details"
+        className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-2 lg:p-3 flex flex-col gap-1 md:gap-2"
+      >
         <div className="shrink-0 space-y-1.5 md:space-y-2">
           <p className="text-accent-primary text-2xs md:text-xs xl:text-sm font-bold leading-snug">
             I build where machine learning, product engineering, and systems

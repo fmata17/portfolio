@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import AboutHeader from "../components/About/AboutHeader";
 import AboutImageGrid from "../components/About/AboutImageGrid";
 import AboutRuntimePanel from "../components/About/AboutRuntimePanel";
@@ -5,8 +7,11 @@ import AboutRuntimePanel from "../components/About/AboutRuntimePanel";
 import { operatingModes, profileImages, profileRows } from "../data/aboutProfile";
 
 export default function About() {
+  const sectionRef = useRef(null);
+
   return (
     <section
+      ref={sectionRef}
       id="about"
       className="h-screen max-h-screen
                 overflow-hidden bg-bg-darker
@@ -31,6 +36,7 @@ export default function About() {
           <AboutRuntimePanel
             modes={operatingModes}
             profileRows={profileRows}
+            sectionRef={sectionRef}
           />
         </div>
       </div>
