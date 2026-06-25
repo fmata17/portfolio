@@ -35,5 +35,5 @@ export const profileRows = [
   ["target", "SWE / ML engineering roles"],
   ["best_fit", "AI products, ML systems, automation"],
   ["core_edge", "Model intuition + production execution"],
-  ["working_style", "Curious, direct, independent, precise"],
+  ["education", "A.S. in Computer Science completed; B.S. in progress"],
 ];

@@ -31,7 +31,7 @@ export const skillGroups = [
     label: "ml.core",
     icon: VscGraph,
     accent: "primary",
-    summary: "Modeling, experiments, and applied ML pipelines.",
+    summary: "Model training, experimentation, and applied ML workflows.",
     skills: [
       {
         name: "PyTorch",
@@ -39,21 +39,23 @@ export const skillGroups = [
         level: "Advanced",
         project: "ml-lab",
         detail:
-          "Optimizing latent-space autoencoders and CNN feature pipelines.",
+          "Training neural networks for image, tabular, and representation learning experiments.",
       },
       {
         name: "TensorFlow",
         icon: SiTensorflow,
         level: "Intermediate",
         project: "ml-lab",
-        detail: "Structuring static graphs and multi-run regression models.",
+        detail:
+          "Structuring training workflows, testing baseline models, and comparing deep learning approaches.",
       },
       {
         name: "Gymnasium",
         icon: SiPython,
         level: "Advanced",
         project: "rl-guardian",
-        detail: "Formulating custom state-action-reward training environments.",
+        detail:
+          "Designing custom reinforcement learning environments with observations, actions, rewards, and episode control.",
       },
       {
         name: "Stable-Baselines3",
@@ -61,7 +63,7 @@ export const skillGroups = [
         level: "Advanced",
         project: "rl-guardian",
         detail:
-          "Deploying policy networks, DQN checkpoints, and evaluation loops.",
+          "Training and evaluating model-free reinforcement learning agents for autonomous gameplay.",
       },
       {
         name: "scikit-learn",
@@ -69,14 +71,15 @@ export const skillGroups = [
         level: "Advanced",
         project: "ml-lab",
         detail:
-          "Feature engineering, scaling, and classical baseline modeling.",
+          "Building classical ML baselines with preprocessing, feature engineering, and model comparison.",
       },
       {
         name: "Hugging Face",
         icon: SiHuggingface,
         level: "Intermediate",
         project: "ml-lab",
-        detail: "Tokenizer pipelines and sequence classification workflows.",
+        detail:
+          "Using pretrained models, tokenizers, and transformer pipelines for applied NLP and ML experiments.",
       },
     ],
   },
@@ -86,15 +89,16 @@ export const skillGroups = [
     label: "agents.runtime",
     icon: VscCircuitBoard,
     accent: "success",
-    summary: "Tool use, orchestration, memory, and observability.",
+    summary:
+      "LLM tools, orchestration patterns, tracing, and retrieval workflows.",
     skills: [
       {
         name: "OpenAI Agents SDK",
         icon: SiOpenai,
         level: "Advanced",
-        project: "rl-guardian",
+        project: "ml-lab",
         detail:
-          "Managing handoffs, tools, shared context, and multi-agent flows.",
+          "Prototyping tool-calling agents with structured outputs, handoffs, and multi-step execution flows.",
       },
       {
         name: "crewAI",
@@ -102,37 +106,39 @@ export const skillGroups = [
         level: "Advanced",
         project: "ml-lab",
         detail:
-          "Constructing hierarchical task structures for collaborative agents.",
+          "Building role-based agent workflows for task decomposition, coordination, and multi-agent execution.",
       },
       {
         name: "LangChain",
         icon: SiLangchain,
         level: "Intermediate",
         project: "ml-lab",
-        detail: "Chaining prompt logic and semantic retrieval workflows.",
+        detail:
+          "Prototyping chains, retrieval workflows, and LLM-powered application patterns.",
       },
       {
         name: "Model Context Protocol",
         icon: SiReact,
-        level: "Advanced",
-        project: "portfolio",
-        detail: "Designing secure MCP gateways for unified tool schemas.",
+        level: "Intermediate",
+        project: "ml-lab",
+        detail:
+          "Connecting AI systems to external tools and context through standardized interface patterns.",
       },
       {
         name: "Opik",
         icon: SiPython,
-        level: "Advanced",
-        project: "ml-lab",
+        level: "Intermediate",
+        project: "rl-guardian",
         detail:
-          "Tracing agent decisions, monitoring latency, and tracking runs.",
+          "Tracking agent runs, prompts, latency, and behavior during LLM workflow testing.",
       },
       {
         name: "Long-Term Memory",
         icon: SiPython,
         level: "Intermediate",
-        project: "rl-guardian",
+        project: "ml-lab",
         detail:
-          "Implementing persistent state vectors and memory retrieval layers.",
+          "Experimenting with persistent context, retrieval patterns, and memory-aware agent workflows.",
       },
     ],
   },
@@ -142,51 +148,55 @@ export const skillGroups = [
     label: "backend.services",
     icon: VscServerProcess,
     accent: "warning",
-    summary: "APIs, storage engines, realtime loops, and low-level logic.",
+    summary: "APIs, databases, application logic, and performance-aware code.",
     skills: [
       {
         name: "C++ (STL)",
         icon: SiCplusplus,
         level: "Advanced",
-        project: "cs-foundations",
+        project: "algorithmic-foundations",
         detail:
-          "Building custom data structures, algorithms, and memory-aware code.",
+          "Implementing data structures and algorithms with attention to runtime, memory usage, and correctness.",
       },
       {
         name: "Python / FastAPI",
         icon: SiPython,
         level: "Advanced",
-        project: "galactic-guardian",
+        project: "ml-lab",
         detail:
-          "Routing concurrent requests and high-frequency WebSocket streams.",
+          "Building Python services, model-facing APIs, and backend logic for applied ML workflows.",
       },
       {
         name: "Node.js (Express)",
         icon: SiNodedotjs,
         level: "Intermediate",
         project: "portfolio",
-        detail: "Developing event-driven APIs and service boundaries.",
+        detail:
+          "Developing lightweight API routes, request handling, and service logic for full-stack JavaScript applications.",
       },
       {
         name: "PostgreSQL",
         icon: SiPostgresql,
         level: "Intermediate",
         project: "ml-lab",
-        detail: "Designing relational schemas, indexes, and query paths.",
+        detail:
+          "Designing relational data models, writing SQL queries, and organizing application data.",
       },
       {
         name: "SQLite",
         icon: SiSqlite,
         level: "Intermediate",
-        project: "cs-foundations",
-        detail: "Structuring local lightweight storage for durable app state.",
+        project: "algorithmic-foundations",
+        detail:
+          "Using lightweight local databases for prototypes, scripts, and small application workflows.",
       },
       {
         name: "MongoDB",
         icon: SiMongodb,
         level: "Intermediate",
         project: "portfolio",
-        detail: "Modeling flexible document schemas for unstructured tracking.",
+        detail:
+          "Modeling flexible document data for prototypes, application state, and rapid iteration.",
       },
     ],
   },
@@ -196,7 +206,8 @@ export const skillGroups = [
     label: "frontend.ui",
     icon: VscLayers,
     accent: "secondary",
-    summary: "Composable UI systems, motion, and browser architecture.",
+    summary:
+      "Responsive interfaces, reusable components, motion, and browser deployment.",
     skills: [
       {
         name: "React / Vite",
@@ -204,7 +215,7 @@ export const skillGroups = [
         level: "Advanced",
         project: "portfolio",
         detail:
-          "Composing modular layouts, render scopes, and stateful interfaces.",
+          "Building responsive interfaces with reusable components, stateful UI, and fast development tooling.",
       },
       {
         name: "TypeScript",
@@ -212,7 +223,7 @@ export const skillGroups = [
         level: "Intermediate",
         project: "portfolio",
         detail:
-          "Setting explicit interfaces across component and data contracts.",
+          "Defining component props, project data models, and safer frontend application contracts.",
       },
       {
         name: "Tailwind CSS",
@@ -220,21 +231,23 @@ export const skillGroups = [
         level: "Advanced",
         project: "portfolio",
         detail:
-          "Building tiled responsive layouts with viewport-aware constraints.",
+          "Creating custom responsive layouts, reusable styling patterns, and polished UI systems.",
       },
       {
         name: "Framer Motion",
         icon: SiReact,
         level: "Advanced",
         project: "portfolio",
-        detail: "Designing spring motion, exit states, and layout transitions.",
+        detail:
+          "Adding smooth micro-interactions, transitions, and motion states that improve interface feel.",
       },
       {
-        name: "WebAssembly (WASM)",
-        icon: SiWebassembly,
+        name: "Responsive Design",
+        icon: VscLayers,
         level: "Advanced",
-        project: "galactic-guardian",
-        detail: "Cross-compiling engine loops for browser-based sandboxes.",
+        project: "portfolio",
+        detail:
+          "Adapting layouts across desktop, tablet, and mobile viewports with clean breakpoint behavior.",
       },
     ],
   },

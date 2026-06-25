@@ -10,10 +10,29 @@ import {
 
 export const projects = [
   {
-    id: "ml-lab",
-    name: "Applied ML & Deep Learning Sandbox",
+    id: "rl-guardian",
+    name: "RL-Guardian",
     deepDescription:
-      "Engineered and trained diverse models ranging from baseline scikit-learn classifiers (SVMs, Random Forests) to complex PyTorch neural networks (CNNs, VAEs, and Transformers). Preprocessed and analyzed tabular (Titanic, Iris), image (MNIST, CelebA), and audio (Musical) datasets. Leveraged CUDA for GPU-accelerated training, tracked architectural experiments with CometML/Opik, and performed rigorous comparative analysis of model interpretability versus predictive performance.",
+      "A model-free reinforcement learning project that turns a custom 2D shooter game into a trainable environment for autonomous gameplay. The system exposes game-state observations, discrete actions, and reward feedback so an agent can learn through repeated play.",
+    github: "https://github.com/fmata17/rl-guardian",
+    tech: [
+      {
+        icon: SiPython,
+        name: "Python",
+      },
+      {
+        icon: SiPytorch,
+        name: "PyTorch",
+      },
+    ],
+    status: "In Progress",
+    progress: 60,
+  },
+  {
+    id: "ml-lab",
+    name: "ML & Deep Learning Lab",
+    deepDescription:
+      "A machine learning and deep learning sandbox for experimenting with model architectures, training pipelines, and performance tradeoffs. The project includes scikit-learn baselines, PyTorch neural networks, GPU-accelerated training, and experiment tracking to compare model performance on tabular, image, and audio datasets.",
     github: "https://github.com/fmata17/ml_lab",
     tech: [
       {
@@ -58,7 +77,7 @@ export const projects = [
     id: "galactic-guardian",
     name: "Galactic Guardian",
     deepDescription:
-      "Built from scratch in Python using Pygame to master clean object-oriented systems design and high-performance game loops. Programmed frame-rate independent physics, granular hitboxes, enemy wave spawners, and player control schemes. Successfully compiled and deployed to the web using Pygbag (WebAssembly) to demonstrate modern cross-compilation workflows for interactive web environments.",
+      "A browser-playable 2D arcade shooter built from scratch in Python with Pygame, focused on clean object-oriented game architecture and responsive gameplay systems. The project includes frame-rate independent movement, collision handling, enemy wave spawning, and player controls, then compiles to WebAssembly with Pygbag for web deployment.",
     github: "https://github.com/fmata17/galactic_guardian",
     tech: [
       {
@@ -91,7 +110,7 @@ export const projects = [
     id: "cs-foundations",
     name: "CS Foundations",
     deepDescription:
-      "Developed a comprehensive training ground for algorithmic problem-solving in Python and C++. Features highly optimized solutions for core structures (including BSTs, Tries, Graphs, and Hash Maps) and advanced algorithmic paradigms (Dynamic Programming, Backtracking, and Greedy choices). Serves as a persistent study archive mapped closely to Big-O time and space complexity evaluations.",
+      "A data structures and algorithms archive for strengthening problem-solving patterns in Python and C++. The project focuses on optimized implementations, complexity analysis, and reusable strategies for approaching common technical interview problems.",
     github: "https://github.com/fmata17/cs_foundations",
     tech: [
       {
@@ -110,7 +129,7 @@ export const projects = [
     id: "portfolio",
     name: "Personal Portfolio",
     deepDescription:
-      "Engineered with React, Vite, Tailwind CSS, and Framer Motion to deliver an ultra-responsive frontend. Modeled after retro-tiling desktop environments and modern code editor themes (like LazyVim). Features direct integration with modular components, custom Tailwind configurations, and micro-interactions optimized across ultra-wide monitors down to standard mobile viewports.",
+      "A responsive frontend portfolio built with React, Vite, Tailwind CSS, and Framer Motion, inspired by retro desktop interfaces and modern code-editor themes. It uses reusable components, custom Tailwind styling, smooth micro-interactions, and clean layouts that adapt across desktop and mobile screens.",
     github: "https://github.com/fmata17/portfolio",
     tech: [
       {
@@ -129,42 +148,23 @@ export const projects = [
     status: "Complete",
     progress: 100,
   },
-  {
-    id: "rl-guardian",
-    name: "RL-Guardian",
-    deepDescription:
-      "Developed a reinforcement learning framework for autonomous decision-making in complex environments. Implemented Q-learning and policy gradient methods to train agents in simulated scenarios.",
-    github: "https://github.com/fmata17/rl-guardian",
-    tech: [
-      {
-        icon: SiPython,
-        name: "Python",
-      },
-      {
-        icon: SiPytorch,
-        name: "PyTorch",
-      },
-    ],
-    status: "In Progress",
-    progress: 60,
-  },
-  {
-    id: "PCQAI",
-    name: "PCQAI",
-    deepDescription:
-      "Designed a novel pseudo-random content generation algorithm leveraging transformer-based architectures. Aimed to produce high-quality, contextually relevant outputs for applications in creative writing and procedural content generation.",
-    github: "https://github.com/fmata17/pcqai",
-    tech: [
-      {
-        icon: SiPython,
-        name: "Python",
-      },
-      {
-        icon: SiPytorch,
-        name: "PyTorch",
-      },
-    ],
-    status: "In Progress",
-    progress: 40,
-  },
+  // {
+  //   id: "PCQAI",
+  //   name: "PCQAI",
+  //   deepDescription:
+  //     "Designed a novel pseudo-random content generation algorithm leveraging transformer-based architectures. Aimed to produce high-quality, contextually relevant outputs for applications in creative writing and procedural content generation.",
+  //   github: "https://github.com/fmata17/pcqai",
+  //   tech: [
+  //     {
+  //       icon: SiPython,
+  //       name: "Python",
+  //     },
+  //     {
+  //       icon: SiPytorch,
+  //       name: "PyTorch",
+  //     },
+  //   ],
+  //   status: "In Progress",
+  //   progress: 40,
+  // },
 ];
