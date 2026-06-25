@@ -32,9 +32,8 @@ export default function Contact() {
 
         <div
           className="flex-1 min-h-0 grid
-                    grid-rows-[minmax(310px,0.95fr)_minmax(0,1fr)]
-                    sm:grid-rows-[minmax(320px,0.9fr)_minmax(0,1fr)]
-                    md:grid-rows-1 md:grid-cols-12
+                    grid-rows-1
+                    md:grid-cols-12 md:grid-rows-1
                     gap-3 md:gap-4 lg:gap-6 pb-4 md:pb-6"
         >
           <ContactFormPanel
@@ -44,15 +43,16 @@ export default function Contact() {
             onSubmit={handleSubmit}
             status={status}
           />
-
-          <ContactConsolePanel
-            elapsedTime={elapsedTime}
-            form={form}
-            logIndex={logIndex}
-            onClear={() => setStatus("idle")}
-            onRetry={() => setStatus("idle")}
-            status={status}
-          />
+          <div className="hidden md:block md:col-span-7">
+            <ContactConsolePanel
+              elapsedTime={elapsedTime}
+              form={form}
+              logIndex={logIndex}
+              onClear={() => setStatus("idle")}
+              onRetry={() => setStatus("idle")}
+              status={status}
+            />
+          </div>
         </div>
       </div>
     </section>
